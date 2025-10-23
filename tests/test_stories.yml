@@ -1,0 +1,194 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: answer path 1
+  steps:
+  - user: |
+      služby?      
+    intent: ask_for_service
+  - action: utter_answer
+  - user: |
+      daňové priznanie      
+    intent: service_dan
+  - action: utter_answer_dan
+
+- story: answer path 2
+  steps:
+  - user: |
+      aké služby ponúkate?      
+    intent: ask_for_service
+  - action: utter_answer
+  - user: |
+      odpad      
+    intent: service_smetie
+  - action: utter_answer_smetie
+
+- story: answer path 3
+  steps:
+  - user: |
+      s čím vieš pomôcť?      
+    intent: ask_for_service
+  - action: utter_answer
+  - user: |
+      chcem podať daňové priznanie za psa      
+    intent: service_pes
+  - action: utter_answer_pes
+
+- story: answer path 4
+  steps:
+  - user: |
+      služby?      
+    intent: ask_for_service
+  - action: utter_answer
+  - user: |
+      vyberám si štvrtú službu      
+    intent: service_zakladna
+  - action: utter_answer_zakladna
+
+- story: answer path 5
+  steps:
+  - user: |
+      mám dieťa      
+    intent: dieta
+  - action: utter_answer_dieta
+  - user: |
+      základná      
+    intent: service_zakladna
+  - action: utter_answer_zakladna
+
+- story: answer path 6
+  steps:
+  - user: |
+      mám dieťa      
+    intent: dieta
+  - action: utter_answer_dieta
+  - user: |
+      materská      
+    intent: service_materska
+  - action: utter_answer_materska
+
+- story: answer path 7
+  steps:
+    - user: |
+        čau        
+      intent: greet
+    - action: utter_greet
+
+
+- story: answer time
+  steps:
+  - user: |
+      čas?      
+    intent: ask_current_time
+  - action: action_current_time
+
+- story: answer samosprava
+  steps:
+  - user: |
+      aké mestské časti?      
+    intent: samosprava
+  - action: utter_answer_samosprava
+
+- story: answer path 8
+  steps:
+    - user: |
+        návštevné hodiny?        
+      intent: navstevne_hodiny
+    - action: utter_answer_navstevne_hodiny
+
+- story: answer path 9
+  steps:
+  - user: |
+      čo dokážeš?      
+    intent: faq
+  - action: utter_faq
+ 
+- story: Full story 1
+  steps:
+  - user: |
+      ahoj      
+    intent: greet
+  - action: utter_greet
+- user: |
+      vyplnit formular      
+    intent: inform_co_potrebujes
+  - action: utter_ask_formular_form_aky_formular
+  - active_loop: formular_form
+  - user: |
+      priznanie za psa{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}      
+    intent: inform_aky_formular
+  - action: utter_ask_formular_form_druh_priznania_PN
+  - active_loop: formular_form
+  - user: |
+      ciastkove priznanie{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}      
+    intent: inform_drup_priznania_PN
+  - action: utter_ask_formular_form_druh_priznania_PN
+  - active_loop: formular_form
+  - user: |
+      2021{"entity": "rok_priznania_PN", "value": "2021"}      
+    intent: inform_rok_priznania_PN
+  - action: utter_ask_formular_form_rok_priznania_PN
+  - active_loop: formular_form
+  - user: |
+      fyzicka osoba{"entity": "typ_osoby_PN", "value": "Fyzická osoba"}      
+    intent: inform_typ_osoby_PN
+  - action: utter_ask_formular_form_typ_osoby_PN
+  - active_loop: formular_form
+  - user: |
+      Matej{"entity": "meno_cloveka", "value": "Matej"}      
+    intent: inform_meno
+  - action: utter_ask_formular_form_meno_cloveka
+  - active_loop: formular_form
+  - user: |
+      moje priezvisko je Scislak{"entity": "priezvisko_cloveka", "value": "Scislak"}      
+    intent: inform_priezvisko
+  - action: utter_ask_formular_form_priezvisko_cloveka
+  - active_loop: formular_form
+  - user: |
+      030303/0000{"entity": "rodne_cislo", "value": "030303/0000"}      
+    intent: inform_rodne_cislo
+  - action: utter_ask_formular_form_rodne_cislo
+  - active_loop: formular_form
+  - user: |
+      12.12.2000{"entity": "datum_narodenia, "value": "12.12.2000"}      
+    intent: inform_datum_narodenia
+  - action: utter_ask_formular_form_datum_narodenia
+  - active_loop: formular_form
+  - user: |
+      Ipeľská{"entity": "ulica", "value": "Ipeľská"}      
+    intent: inform_ulica
+  - action: utter_ask_formular_form_ulica
+  - active_loop: formular_form
+  - user: |
+      Košice - Sídlisko KVP{"entity": "obec", "value": "Košice - Sídlisko KVP"}      
+    intent: inform_obec
+  - action: utter_ask_formular_form_obec
+  - active_loop: formular_form
+  - user: |
+      Slovensko{"entity": "stat", "value": "Slovensko"}      
+    intent: inform_stat
+  - action: utter_ask_formular_form_stat
+  - active_loop: formular_form
+  - user: |
+      obchodne meno{"entity": "obchodne_meno", "value": "- - -"}      
+    intent: inform_obchodne_meno
+  - action: utter_ask_formular_form_obchodne_meno
+  - active_loop: formular_form
+  - user: |
+      pravna forma{"entity": "pravna_forma", "value": "- - -"}      
+    intent: inform_pravna_forma
+  - action: utter_ask_formular_form_pravna_forma
+  - active_loop: formular_form
+  - user: |
+      ICO{"entity": "ICO", "value": "- - -"}      
+    intent: inform_ICO
+  - action: utter_ask_formular_form_ICO
+  - active_loop: formular_form
+  - user: |
+      0944100200{"entity": "telefonne_cislo", "value": "0944100200"}      
+    intent: inform_telefonne_cislo
+  - action: utter_ask_formular_form_telefonne_cislo
+  - active_loop: null
+  - action: utter_submit_alles
+  - action: utter_slots_values_formular_form
