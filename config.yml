@@ -1,0 +1,49 @@
+# The config recipe.
+# https://rasa.com/docs/rasa/model-configuration/
+recipe: default.v1
+
+assistant_id: 20240202-211905-shy-watch
+
+
+language: sk
+
+pipeline:
+- name: "SpacyNLP"
+    # language model to load
+  model: "sk_core_web_md"
+- name: SpacyTokenizer
+- name: SpacyFeaturizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: "char_wb"
+  min_ngram: 1
+  max_ngram: 4
+- name: DIETClassifier
+  epochs: 100
+  optimizer: 'tf.keras.optimizers.legacy.Adam'
+- name: EntitySynonymMapper
+- name: ResponseSelector
+  epochs: 100
+  retrieval_intent: faq
+- name: ResponseSelector
+  epochs: 100
+  retrieval_intent: chitchat
+
+policies:
+- name: MemoizationPolicy
+  max_history: 10
+- name: RulePolicy
+  core_fallback_threshold: 0.4
+  core_fallback_action_name: "action_default_fallback"
+  enable_fallback_prediction: True
+  
+- name: TEDPolicy
+  max_history: 50
+  epochs: 100
+  connection_density: 0.25
+  split_entities_by_comma: true
+  constrain_similarities: true
+  model_confidence: softmax
+  use_GPU: false
+
