@@ -1,0 +1,2601 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - ahoj
+    - cau
+    - dobry den
+    - dobrý deň
+    - dobré ráno
+    - dobrý večer
+    - Dobre rano
+    - Dobry vecer
+    - zdravim
+    - čau
+    - dobrý deň
+    - zdravím    
+
+- intent: goodbye
+  examples: |
+    - dovidenia
+    - Dovidenia
+    - maj sa
+    - Maj sa
+    - vidime sa nabuduce
+    - vidíme sa nabudúce
+    - Vidíme sa nabudúce
+    - Vidime sa nabuduce    
+  
+
+- intent: affirm
+  examples: |
+    - ano
+    - jj
+    - ANO
+    - Ano
+    - Áno
+    - áno
+    - suhlasim
+    - Suhlasim
+    - súhlasím
+    - Súhlasím
+    - pravda
+    - OK
+    - ok
+    - dobre
+    - Dobre
+    - PRAVDA
+    - Pravda    
+
+- intent: deny
+  examples: |
+    - nie
+    - nn
+    - n
+    - N
+    - NN
+    - NIE
+    - nie je to tak
+    - Nie je to tak
+    - NIE JE TO TAK
+    - nesuhlasim
+    - Nesuhlasim
+    - Nesúhlasím
+    - nesúhlasím
+    - nie je to pravda
+    - Nie je to pravda
+    - urcite nie
+    - Urcite nie
+    - určite nie
+    - Určite nie
+    - ani náhodou
+    - Ani náhodou
+    - ani nahodou
+    - Ani nahodou    
+
+- intent: inform_co_potrebujes
+  examples: |
+    - formular
+    - Formular
+    - formulár
+    - Formulár
+    - vyplnit formular
+    - vyplniť formulár
+    - Vyplniť formulár
+    - Vyplnit formular
+    - potrebujem vyplnit formular 
+    - potrebujem vyplniť formulár
+    - Potrebujem vyplniť formulár
+    - Potrebujem vyplnit formular
+    - chcem vyplnit formular
+    - chcem vyplniť formulár
+    - Chcem vyplnit formular
+    - Chcem vyplniť formulár
+    - potreboval by som vyplnit formular
+    - potreboval by som vyplniť formulár
+    - Potreboval by som vyplniť formulár
+    - Potreboval by som vyplnit formular
+    - Chcel by som vyplniť formulár
+    - Chcel by som vyplnit formular
+    - chcel by som vyplniť formulár
+    - chcel by som vyplnit formular
+    - aký formulár?
+    - aky formular?
+    - aké formuláre?
+    - ake formulare?
+    - zaujímajú ma formuláre
+    - zaujimaju ma formulare
+    - povedz ake formulare
+        
+- intent: inform_aky_formular
+  examples: |   
+    - [Podavanie danového priznania k dani za psa]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [Podávanie daňového priznania k dani za psa]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [podavanie danoveho priznania k dani za psa]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [podávanie daňového priznania k dani za psa]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [danove priznanie k dani za psa]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [Danové priznanie k dani za psa]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [daňové priznanie k dani za psa]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [Daňové priznanie k dani za psa]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [daňové priznanie za psa]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [Daňové priznanie za psa]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [Danove priznanie za psa]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [danove priznanie za psa]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [priznanie za psa]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [Priznanie za psa]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [priznanie pes]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [Priznanie pes]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [priznanie - pes]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [priznanie-pes]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani za psa"}
+    - [nehnuteľnosť]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [nehnutelnost]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [Podavanie danoveho priznania k dani z nehnutelnosti]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [Podávanie daňového priznania k dani z nehnuteľnosti]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [danove priznanie k dani z nehnutelnosti]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [Danove priznanie k dani z nehnutelnosti]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [daňové priznanie k dani z nehnuteľnosti]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [Daňové priznanie k dani z nehnuteľnosti]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [daňové priznanie z nehnuteľnosti]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [Daňové priznanie z nehnuteľnosti]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [Danove priznanie z nehnutelnosti]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [danove priznanie z nehnutelnosti]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [priznanie z nehnutelnosti]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [Priznanie z nehnutelnosti]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [priznanie nehnutelnost]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [Priznanie nehnutelnost]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [priznanie - nehnutelnost]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - [priznanie-nehnutelnost]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - mam [nehnutelnost]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+    - mám [nehnuteľnosť]{"entity": "aky_formular", "value": "Podávanie daňového priznania k dani z nehnuteľnosti"}
+
+- intent: chitchat/ask_name
+  examples: |
+    - Ako sa voláš?
+    - ako sa volas?
+    - ako sa volas
+    - môžem vedieť tvoje meno?
+    - Ako ťa ľudia volajú?
+    - Máš nejaké meno?
+    - si bot?
+    - Si chatbot?
+    - si asistent?
+    - Si asistent?
+    - Kto vlastne si?
+    - kto vlastne si?
+    - si clovek?
+    - Si clovek?
+    - si človek?
+    - si človek
+    - Si človel
+    - si robot?
+    - kto si?    
+
+- intent: chitchat/ask_weather
+  examples: |
+    - Aké je počasie?
+    - Povedz mi niečo o počasí
+    - Ako dnes hlásia?
+    - Bude dnes pekne?
+    - Aké je počasie v Košiciach?
+    - počasie KE
+    - Bude dnes slnečno?
+    - Nemohol by si skontrolovať počasie?
+    - Mám rád slnečné dni    
+
+- intent: faq
+  examples: |
+    - čo sa ťa môžem opýtať?
+    - co sa ta mozem opytat?
+    - čo vieš?
+    - co vies?
+    - čo dokážeš?
+    - co dokazes?
+    - načo slúžiš?
+    - naco sluzis?
+    - čo dokážeš robiť?
+    - co dokazes robit?
+    - ako mi vieš pomôcť?
+    - ako mi vies pomoct?
+    - čo robíš?
+    - co robis?
+    - aké máš schopnosti?
+    - ake mas schopnosti?
+    - čo všetko vieš?
+    - co vsetko vies?
+        
+
+- intent: co_dokazem_faq
+  examples: |
+    - aké otázky vieš zodpovedať?
+    - ake otazky vies zodpovedat?
+    - na aké otázky vieš odpovedať?
+    - na ake otazky vies odpovedat?
+    - aké otázky
+    - ake otazky
+    - aké otázky?
+    - jednoduché otázky
+    - na čo vieš odpoveď?
+    - informačné otázky
+    - čo vieš o Košiciach?
+    - povedz niečo o Košiciach
+    - informácie Košice
+    - chcem odpoveď na niektoré otázky
+    - chcem odpoved na niektore otazky    
+
+- intent: zapisanie_deti_faq
+  examples: |
+    - zapísanie detí do škôl
+    - zapísanie deti do skol
+    - zapísanie dieťaťa do školy
+    - zapisanie dietata do skoly
+    - zápis dieťaťa do školy
+    - zapis dietata do skoly
+    - zápis do školy
+    - zapis do skoly
+    - do akých škôl viem zapísať dieťa?
+    - do akych skol viem zapisat dieta?
+    - aké zapísanie?
+    - ake zapisanie?
+    - zapísanie
+    - zapisanie
+    - školy
+    - skoly
+    - aké školy?
+    - ake skoly?
+    - o aké školy ide?
+    - o ake skoly ide?
+    - o aké školy sa jedná?
+    - o ake skoly sa jedna?    
+
+
+- intent: aktuality
+  examples: |
+    - aktuality
+    - čo je nové?
+    - co je nove
+    - čo sa deje v Košiciach    
+
+- intent: kontakt
+  examples: |
+    - kontakt
+    - chcem kontakt
+    - chcel by som kontakt na kontaktnú osobu
+    - chcem telefónne číslo
+    - chcem email
+    - aký je kontakt?
+    - kontaktné údaje
+    - kontaktne udaje
+    - aké kontaktné údaje
+    - ake kontaktne udaje?    
+
+- intent: kontakt_na_dane
+  examples: |
+    - kontakt na danove
+    - chcel by som kontakt na danove
+    - chcem telefónne číslo na danove
+    - chcem email na danove
+    - adresa na danove
+    - aký je kontakt na danove
+    - kontakt danove
+    - oddelenie poplatkov    
+
+- intent: kontakt_na_odpad
+  examples: |
+    - kontakt na odpady
+    - email na odpad
+    - odpad kontakt
+    - oddelenie poplatkov za opdad
+    - oddelenie poplatkov opdad
+    - oddelenie opdpad
+    - oddelenie za odpad
+    - oddelenie odpadu    
+
+- intent: kontakt_na_psa
+  examples: |
+    - chcem kontakt na osobu ohľadom psa
+    - chcel by som kontakt na kontaktnú osobu
+    - chcem telefónne číslo na osobu ktorá rieši psov
+    - chcem email na osobu ktora riesi psov
+    - pes kontakt
+    - kontakt na poplatky za psa
+    - oddelenie poplatkov za psa
+    - oddelenie poplatkov pes
+    - oddelenie pes
+    - oddelenie za psa
+    - oddelenie pes    
+
+- intent: kontakt_na_skolstvo
+  examples: |
+    - kontakt na oddelenie školstva
+    - chcem kontakt na školstvo
+    - skolstvo kontakt
+    - kontakt na školstvo
+    - oddelenie skolstva
+    - oddelenie školstva
+    - oddelenie školstvo    
+
+- intent: navstevne_hodiny
+  examples: |
+    - kedy máte návštevné hodiny?
+    - návštevné hodiny?
+    - otvorene?
+    - kedy môžem príst?
+    - návštevná doba    
+
+- intent: ask_for_service
+  examples: |
+    - aké služby ponúkate?
+    - služby?
+    - čo sa dá robiť?
+    - s čím vieš pomôcť?
+    - sluzby    
+  
+- intent: priznanie_faq
+  examples: |
+    - aké priznanie?
+    - priznanie?
+    - podávanie priznaní    
+
+- intent: service_dan
+  examples: |
+    - vyberám si prvú službu
+    - daňové priznanie
+    - daň z nehnuteľnosti
+    - chcem podať daňové priznanie
+    - 1    
+  
+- intent: service_smetie
+  examples: |
+    - vyberám si druhú službu
+    - odpad
+    - komunálny odpad
+    - chcem dvojku
+    - smetie    
+
+- intent: service_pes
+  examples: |
+    - vyberám si tretiu službu
+    - daň za psa
+    - chcem podať daňové priznanie za psa
+    - mám psa
+    - 2    
+
+- intent: service_zakladna
+  examples: |
+    - vyberám si štvrtú službu
+    - chcem dať dieťa na základnú školu
+    - chcem zapisat dieta na zakladnu skolu
+    - základná
+    - základná škola
+    - zakladna    
+
+- intent: service_materska
+  examples: |
+    - vyberám si piatu službu
+    - chcem dať dieťa do materskej školy
+    - chcem zapisat dieta na matersku skolu
+    - materská škola
+    - materská
+    - materska    
+
+- intent: service_umelecka
+  examples: |
+    - vyberám si šiestu službu
+    - chcem dať dieťa na umeleckú školu
+    - chcem zapisat dieta na umelecku skolu
+    - umelecká škola
+    - umelecka
+    - na umelecku
+    - umeleckej    
+ 
+- intent: dieta
+  examples: |
+    - mám dieťa
+    - chcem zistit ako zapísať dieťa
+    - ako zapisem dieta na skolu?
+    - mam dieta     
+
+- intent: ask_current_time
+  examples: |
+    - čas?
+    - cas
+    - koľko je hodín?
+    - hodín?
+    - povedz mi čas
+    - povedz mi koľko je hodín    
+###################################################PN
+
+- intent: inform_druh_priznania_PN
+  examples: |
+    - [Priznanie]{"entity": "druh_priznania_PN", "value": "Priznanie"}
+    - [priznanie]{"entity": "druh_priznania_PN", "value": "Priznanie"}
+    - druh priznania je [Priznanie]{"entity": "druh_priznania_PN", "value": "Priznanie"}
+    - druh priznania je [priznanie]{"entity": "druh_priznania_PN", "value": "Priznanie"}
+    - druh priznania - [priznanie]{"entity": "druh_priznania_PN", "value": "Priznanie"}
+    - druh priznania - [Priznanie]{"entity": "druh_priznania_PN", "value": "Priznanie"}
+    - druh priznania-[priznanie]{"entity": "druh_priznania_PN", "value": "Priznanie"}
+    - druh priznania-[Priznanie]{"entity": "druh_priznania_PN", "value": "Priznanie"}
+    - druh priznania:[priznanie]{"entity": "druh_priznania_PN", "value": "Priznanie"}
+    - druh priznania:[Priznanie]{"entity": "druh_priznania_PN", "value": "Priznanie"}
+    - druh priznania : [priznanie]{"entity": "druh_priznania_PN", "value": "Priznanie"}
+    - druh priznania : [Priznanie]{"entity": "druh_priznania_PN", "value": "Priznanie"}
+    - [Ciastkove priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - [Čiastkové priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - [ciastkove priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - [čiastkové priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - [Čiastkové]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - [čiastkové]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - [ciastkove]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - [Ciastkove]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania je [ciastkove priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania je [Ciastkove priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania je [čiastkové priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania je [Čiastkové priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania je [ciastkove{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania je [Ciastkove]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania je [čiastkové]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania je [Čiastkové]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania - [ciastkove priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania - [Ciastkove priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania - [čiastkové priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania - [Čiastkové priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania - [ciastkove{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania - [Ciastkove]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania - [čiastkové]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania - [Čiastkové]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania-[ciastkove priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania-[Ciastkove priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania-[čiastkové priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania-[Čiastkové priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania-[ciastkove{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania-[Ciastkove]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania-[čiastkové]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania-[Čiastkové]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania : [ciastkove priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania : [Ciastkove priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania : [čiastkové priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania : [Čiastkové priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania : [ciastkove{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania : [Ciastkove]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania : [čiastkové]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania : [Čiastkové]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania:[ciastkove priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania:[Ciastkove priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania:[čiastkové priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania:[Čiastkové priznanie]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania:[ciastkove{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania:[Ciastkove]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania:[čiastkové]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - druh priznania:[Čiastkové]{"entity": "druh_priznania_PN", "value": "Čiastkové priznanie"}
+    - [Ciastkove priznanie na zanik danovej povinnosti]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [ciastkove priznanie na zanik danovej povinnosti]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [Čiastkové priznanie na zánik daňovej povinnosti]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [čiastkové priznanie na zánik daňovej povinnosti]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [Čiastkové priznanie na zánik]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [čiastkové priznanie na zánik]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [ciastkove priznanie na zanik]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [Ciastkove priznanie na zanik]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [Čiastkové priznanie na zánik]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [Ciastkove priznanie na zanik danovej]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [ciastkove priznanie na zanik danovej]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [Čiastkové priznanie na zánik daňovej]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [čiastkové priznanie na zánik daňovej]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [Ciastkove priznanie na zanik povinnosti]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [ciastkove priznanie na zanik povinnosti]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [Čiastkové priznanie na zánik povinnosti]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [čiastkové priznanie na zánik povinnosti]{"entity": "druh_priznania_PN", "value": "ČP na zánik daňovej povinnosti"}
+    - [Opravne priznanie]{"entity": "druh_priznania_PN", "value": "Opravné priznanie"}
+    - [opravne priznanie]{"entity": "druh_priznania_PN", "value": "Opravné priznanie"}
+    - [Opravné priznanie]{"entity": "druh_priznania_PN", "value": "Opravné priznanie"}
+    - [opravné priznanie]{"entity": "druh_priznania_PN", "value": "Opravné priznanie"}
+    - [Opravne]{"entity": "druh_priznania_PN", "value": "Opravné priznanie"}
+    - [Opravné]{"entity": "druh_priznania_PN", "value": "Opravné priznanie"}
+    - [opravne]{"entity": "druh_priznania_PN", "value": "Opravné priznanie"}
+    - [opravné]{"entity": "druh_priznania_PN", "value": "Opravné priznanie"}
+    - [Dodatocne priznanie]{"entity": "druh_priznania_PN", "value": "Dodatočné priznanie"}
+    - [Dodatočné priznanie]{"entity": "druh_priznania_PN", "value": "Dodatočné priznanie"}
+    - [dodatocne priznanie]{"entity": "druh_priznania_PN", "value": "Dodatočné priznanie"}
+    - [dodatočné priznanie]{"entity": "druh_priznania_PN", "value": "Dodatočné priznanie"}
+    - [Dodatocne]{"entity": "druh_priznania_PN", "value": "Dodatočné priznanie"}
+    - [dodatocne]{"entity": "druh_priznania_PN", "value": "Dodatočné priznanie"}
+    - [Dodatočné]{"entity": "druh_priznania_PN", "value": "Dodatočné priznanie"}
+    - [dodatočné]{"entity": "druh_priznania_PN", "value": "Dodatočné priznanie"}    
+
+- intent: inform_rok_priznania_PN
+  examples: |
+    - [2022]{"entity": "rok_priznania_PN"}
+    - [2023]{"entity": "rok_priznania_PN"}
+    - [2024]{"entity": "rok_priznania_PN"}    
+
+- intent: inform_typ_osoby_PN
+  examples: |
+    - [Fyzicka osoba]{"entity": "typ_osoby_PN", "value": "Fyzická osoba"}
+    - [fyzicka osoba]{"entity": "typ_osoby_PN", "value": "Fyzická osoba"}
+    - [Fyzická osoba]{"entity": "typ_osoby_PN", "value": "Fyzická osoba"}
+    - [fyzická osoba]{"entity": "typ_osoby_PN", "value": "Fyzická osoba"}
+    - [fyzicka]{"entity": "typ_osoby_PN", "value": "Fyzická osoba"}
+    - [fyzická]{"entity": "typ_osoby_PN", "value": "Fyzická osoba"}
+    - [Fyzicka]{"entity": "typ_osoby_PN", "value": "Fyzická osoba"}
+    - [Fyzická]{"entity": "typ_osoby_PN", "value": "Fyzická osoba"}
+    - [FO]{"entity": "typ_osoby_PN", "value": "Fyzická osoba"}
+    - [fo]{"entity": "typ_osoby_PN", "value": "Fyzická osoba"}
+    - [fizicka]{"entity": "typ_osoby_PN", "value": "Fyzická osoba"}
+    - [fizická]{"entity": "typ_osoby_PN", "value": "Fyzická osoba"}
+    - [Fizicka]{"entity": "typ_osoby_PN", "value": "Fyzická osoba"}
+    - [Fizická]{"entity": "typ_osoby_PN", "value": "Fyzická osoba"}
+    - [Fyzicka osoba podnikatel]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [fyzicka osoba podnikatel]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [Fyzická osoba podnikateľ]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [fyzická osoba podnikateľ]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [Podnikatel]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [podnikatel]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [Podnikateľ]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [podnikateľ]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [FO Podnikatel]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [FO podnikatel]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [FO Podnikateľ]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [FO podnikateľ]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [fo Podnikatel]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [fo podnikatel]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [fo Podnikateľ]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [fo podnikateľ]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [Fo Podnikatel]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [Fo podnikatel]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [Fo Podnikateľ]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [Fo podnikateľ]{"entity": "typ_osoby_PN", "value": "Fyzická osoba podnikateľ"}
+    - [Pravnicka osoba]{"entity": "typ_osoby_PN", "value": "Právnicka osoba"}
+    - [pravnicka osoba]{"entity": "typ_osoby_PN", "value": "Právnicka osoba"}
+    - [právnicka osoba]{"entity": "typ_osoby_PN", "value": "Právnicka osoba"}
+    - [Právnicka osoba]{"entity": "typ_osoby_PN", "value": "Právnicka osoba"}
+    - [Pravnicka]{"entity": "typ_osoby_PN", "value": "Právnicka osoba"}
+    - [pravnicka]{"entity": "typ_osoby_PN", "value": "Právnicka osoba"}
+    - [právnicka]{"entity": "typ_osoby_PN", "value": "Právnicka osoba"}
+    - [Právnicka]{"entity": "typ_osoby_PN", "value": "Právnicka osoba"}
+    - [PO]{"entity": "typ_osoby_PN", "value": "Právnicka osoba"}
+    - [po]{"entity": "typ_osoby_PN", "value": "Právnicka osoba"}
+    - [Po]{"entity": "typ_osoby_PN", "value": "Právnicka osoba"}
+    - [pO]{"entity": "typ_osoby_PN", "value": "Právnicka osoba"}    
+
+- intent: inform_meno
+  examples: |
+    - [meno]{"entity": "meno_cloveka", "value": "- - -"}
+    - moje meno je [Matej]{"entity": "meno_cloveka"}
+    - [matej]{"entity": "meno_cloveka"}
+    - volam sa [Jan Pavol]{"entity": "meno_cloveka"}
+    - ja som [Michael]{"entity": "meno_cloveka"}
+    - som [Patrik Ivan]{"entity": "meno_cloveka"}
+    - [Roman]{"entity": "meno_cloveka"}
+    - [David Abraham]{"entity": "meno_cloveka"}
+    - [Alexandra]{"entity": "meno_cloveka"}
+    - [Karina]{"entity": "meno_cloveka"}
+    - [Daniela]{"entity": "meno_cloveka"}
+    - [Drahoslav]{"entity": "meno_cloveka"}
+    - [Andrea]{"entity": "meno_cloveka"}
+    - [Antónia]{"entity": "meno_cloveka"}
+    - [Bohuslava]{"entity": "meno_cloveka"}
+    - [Severín]{"entity": "meno_cloveka"}
+    - [Alexej]{"entity": "meno_cloveka"}
+    - [Dáša]{"entity": "meno_cloveka"}
+    - [Malvína]{"entity": "meno_cloveka"}
+    - [Ernest]{"entity": "meno_cloveka"}
+    - [Rastislav]{"entity": "meno_cloveka"}
+    - [Radovan]{"entity": "meno_cloveka"}
+    - [Dobroslava]{"entity": "meno_cloveka"}
+    - [Dobroslav]{"entity": "meno_cloveka"}
+    - [Kristína]{"entity": "meno_cloveka"}
+    - [Nataša]{"entity": "meno_cloveka"}
+    - [Bohdana]{"entity": "meno_cloveka"}
+    - [Mário]{"entity": "meno_cloveka"}
+    - [Dalibor]{"entity": "meno_cloveka"}
+    - [Sebastián]{"entity": "meno_cloveka"}
+    - [Vincent]{"entity": "meno_cloveka"}
+    - [Zora]{"entity": "meno_cloveka"}
+    - [Miloš]{"entity": "meno_cloveka"}
+    - [Timotej]{"entity": "meno_cloveka"}
+    - [Gejza]{"entity": "meno_cloveka"}
+    - [Tamara]{"entity": "meno_cloveka"}
+    - [Bohuš]{"entity": "meno_cloveka"}
+    - [Alfonz]{"entity": "meno_cloveka"}
+    - [Gašpar]{"entity": "meno_cloveka"}
+    - [Ema]{"entity": "meno_cloveka"}
+    - [Emil]{"entity": "meno_cloveka"}
+    - [Tatiana]{"entity": "meno_cloveka"}
+    - [Erika]{"entity": "meno_cloveka"}
+    - [Erik]{"entity": "meno_cloveka"}
+    - [Blažej]{"entity": "meno_cloveka"}
+    - [Veronika]{"entity": "meno_cloveka"}
+    - [Agáta]{"entity": "meno_cloveka"}
+    - [Dorota]{"entity": "meno_cloveka"}
+    - [Vanda]{"entity": "meno_cloveka"}
+    - [Zoja]{"entity": "meno_cloveka"}
+    - [Zdenko]{"entity": "meno_cloveka"}
+    - [Gabriela]{"entity": "meno_cloveka"}
+    - [Dezider]{"entity": "meno_cloveka"}
+    - [Perla]{"entity": "meno_cloveka"}
+    - [Arpád]{"entity": "meno_cloveka"}
+    - [Valentín]{"entity": "meno_cloveka"}
+    - [Pravoslav]{"entity": "meno_cloveka"}
+    - [Ida]{"entity": "meno_cloveka"}
+    - [Liana]{"entity": "meno_cloveka"}
+    - [Miloslava]{"entity": "meno_cloveka"}
+    - [Jaromír]{"entity": "meno_cloveka"}
+    - [Vlasta]{"entity": "meno_cloveka"}
+    - [Lívia]{"entity": "meno_cloveka"}
+    - [Eleonóra]{"entity": "meno_cloveka"}
+    - [Etela]{"entity": "meno_cloveka"}
+    - [Roman]{"entity": "meno_cloveka"}
+    - [Romana]{"entity": "meno_cloveka"}
+    - [Matej]{"entity": "meno_cloveka"}
+    - [Mateo]{"entity": "meno_cloveka"}
+    - [Frederik]{"entity": "meno_cloveka"}
+    - [Frederika]{"entity": "meno_cloveka"}
+    - [Viktor]{"entity": "meno_cloveka"}
+    - [Alexander]{"entity": "meno_cloveka"}
+    - [Zlatica]{"entity": "meno_cloveka"}
+    - [Radomír]{"entity": "meno_cloveka"}
+    - [Albín]{"entity": "meno_cloveka"}
+    - [Anežka]{"entity": "meno_cloveka"}
+    - [Bohumil]{"entity": "meno_cloveka"}
+    - [Bohumila]{"entity": "meno_cloveka"}
+    - [Kazimír]{"entity": "meno_cloveka"}
+    - [Fridrich]{"entity": "meno_cloveka"}
+    - [Radoslav]{"entity": "meno_cloveka"}
+    - [Radoslava]{"entity": "meno_cloveka"}
+    - [Tomáš]{"entity": "meno_cloveka"}
+    - [Alan]{"entity": "meno_cloveka"}
+    - [Alana]{"entity": "meno_cloveka"}
+    - [Františka]{"entity": "meno_cloveka"}
+    - [Bruno]{"entity": "meno_cloveka"}
+    - [Branislav]{"entity": "meno_cloveka"}
+    - [Angela]{"entity": "meno_cloveka"}
+    - [Angelika]{"entity": "meno_cloveka"}
+    - [Gregor]{"entity": "meno_cloveka"}
+    - [Vlastimil]{"entity": "meno_cloveka"}
+    - [Matilda]{"entity": "meno_cloveka"}
+    - [Svetlana]{"entity": "meno_cloveka"}
+    - [Boleslav]{"entity": "meno_cloveka"}
+    - [Ľubica]{"entity": "meno_cloveka"}
+    - [Eduard]{"entity": "meno_cloveka"}
+    - [Jozef]{"entity": "meno_cloveka"}
+    - [Víťazoslav]{"entity": "meno_cloveka"}
+    - [Klaudius]{"entity": "meno_cloveka"}
+    - [Blahoslav]{"entity": "meno_cloveka"}
+    - [Beňadik]{"entity": "meno_cloveka"}
+    - [Adrián]{"entity": "meno_cloveka"}
+    - [Gabriel]{"entity": "meno_cloveka"}
+    - [Marián]{"entity": "meno_cloveka"}
+    - [Emanuel]{"entity": "meno_cloveka"}
+    - [Alena]{"entity": "meno_cloveka"}
+    - [Soňa]{"entity": "meno_cloveka"}
+    - [Miroslav]{"entity": "meno_cloveka"}
+    - [Vieroslava]{"entity": "meno_cloveka"}
+    - [Benjamín]{"entity": "meno_cloveka"}
+    - [Hugo]{"entity": "meno_cloveka"}
+    - [Zita]{"entity": "meno_cloveka"}
+    - [Richard]{"entity": "meno_cloveka"}
+    - [Izidor]{"entity": "meno_cloveka"}
+    - [Miroslava]{"entity": "meno_cloveka"}
+    - [Irena]{"entity": "meno_cloveka"}
+    - [Zoltán]{"entity": "meno_cloveka"}
+    - [Albert]{"entity": "meno_cloveka"}
+    - [Milena]{"entity": "meno_cloveka"}
+    - [Igor]{"entity": "meno_cloveka"}
+    - [Július]{"entity": "meno_cloveka"}
+    - [Estera]{"entity": "meno_cloveka"}
+    - [Aleš]{"entity": "meno_cloveka"}
+    - [Justina]{"entity": "meno_cloveka"}
+    - [Fedor]{"entity": "meno_cloveka"}
+    - [Dana]{"entity": "meno_cloveka"}
+    - [Danica]{"entity": "meno_cloveka"}
+    - [Rudolf]{"entity": "meno_cloveka"}
+    - [Rudolfa]{"entity": "meno_cloveka"}
+    - [Valér]{"entity": "meno_cloveka"}
+    - [Jela]{"entity": "meno_cloveka"}
+    - [Marcel]{"entity": "meno_cloveka"}
+    - [Ervín]{"entity": "meno_cloveka"}
+    - [Slavomír]{"entity": "meno_cloveka"}
+    - [Vojtech]{"entity": "meno_cloveka"}
+    - [Juraj]{"entity": "meno_cloveka"}
+    - [Marek]{"entity": "meno_cloveka"}
+    - [Jaroslava]{"entity": "meno_cloveka"}
+    - [Jaroslav]{"entity": "meno_cloveka"}
+    - [Jarmila]{"entity": "meno_cloveka"}
+    - [Lea]{"entity": "meno_cloveka"}
+    - [Anastázia]{"entity": "meno_cloveka"}
+    - [Žigmund]{"entity": "meno_cloveka"}
+    - [Galina]{"entity": "meno_cloveka"}
+    - [Timea]{"entity": "meno_cloveka"}
+    - [Florián]{"entity": "meno_cloveka"}
+    - [Lesia]{"entity": "meno_cloveka"}
+    - [Lesana]{"entity": "meno_cloveka"}
+    - [Hermína]{"entity": "meno_cloveka"}
+    - [Monika]{"entity": "meno_cloveka"}
+    - [Ingrida]{"entity": "meno_cloveka"}
+    - [Roland]{"entity": "meno_cloveka"}
+    - [Viktória]{"entity": "meno_cloveka"}
+    - [Blažena]{"entity": "meno_cloveka"}
+    - [Pankrác]{"entity": "meno_cloveka"}
+    - [Servác]{"entity": "meno_cloveka"}
+    - [Bonifác]{"entity": "meno_cloveka"}
+    - [Žofia]{"entity": "meno_cloveka"}
+    - [Sofia]{"entity": "meno_cloveka"}
+    - [Svetozár]{"entity": "meno_cloveka"}
+    - [Gizela]{"entity": "meno_cloveka"}
+    - [Viola]{"entity": "meno_cloveka"}
+    - [Gertrúda]{"entity": "meno_cloveka"}
+    - [Bernard]{"entity": "meno_cloveka"}
+    - [Zina]{"entity": "meno_cloveka"}
+    - [Júlia]{"entity": "meno_cloveka"}
+    - [Juliana]{"entity": "meno_cloveka"}
+    - [Želmíra]{"entity": "meno_cloveka"}
+    - [Ela]{"entity": "meno_cloveka"}
+    - [Urban]{"entity": "meno_cloveka"}
+    - [Vivien]{"entity": "meno_cloveka"}
+    - [Dušan]{"entity": "meno_cloveka"}
+    - [Iveta]{"entity": "meno_cloveka"}
+    - [Viliam]{"entity": "meno_cloveka"}
+    - [Vilma]{"entity": "meno_cloveka"}
+    - [Ferdinand]{"entity": "meno_cloveka"}
+    - [Petrana]{"entity": "meno_cloveka"}
+    - [Petronela]{"entity": "meno_cloveka"}
+    - [Žaneta]{"entity": "meno_cloveka"}
+    - [Xénia]{"entity": "meno_cloveka"}
+    - [Oxana]{"entity": "meno_cloveka"}
+    - [Karolína]{"entity": "meno_cloveka"}
+    - [Lenka]{"entity": "meno_cloveka"}
+    - [Laura]{"entity": "meno_cloveka"}
+    - [Norbert]{"entity": "meno_cloveka"}
+    - [Róbert]{"entity": "meno_cloveka"}
+    - [Róberta]{"entity": "meno_cloveka"}
+    - [Medard]{"entity": "meno_cloveka"}
+    - [Stanislava]{"entity": "meno_cloveka"}
+    - [Margaréta]{"entity": "meno_cloveka"}
+    - [Gréta]{"entity": "meno_cloveka"}
+    - [Jesika]{"entity": "meno_cloveka"}
+    - [Zlatko]{"entity": "meno_cloveka"}
+    - [Anton]{"entity": "meno_cloveka"}
+    - [Vasil]{"entity": "meno_cloveka"}
+    - [Vít]{"entity": "meno_cloveka"}
+    - [Blanka]{"entity": "meno_cloveka"}
+    - [Bianka]{"entity": "meno_cloveka"}
+    - [Adolf]{"entity": "meno_cloveka"}
+    - [Vratislav]{"entity": "meno_cloveka"}
+    - [Alfréd]{"entity": "meno_cloveka"}
+    - [Valéria]{"entity": "meno_cloveka"}
+    - [Alojz]{"entity": "meno_cloveka"}
+    - [Paulína]{"entity": "meno_cloveka"}
+    - [Sidónia]{"entity": "meno_cloveka"}
+    - [Ján]{"entity": "meno_cloveka"}
+    - [Olívia]{"entity": "meno_cloveka"}
+    - [Tadeáš]{"entity": "meno_cloveka"}
+    - [Adriána]{"entity": "meno_cloveka"}
+    - [Ladislav]{"entity": "meno_cloveka"}
+    - [Ladislava]{"entity": "meno_cloveka"}
+    - [Beáta]{"entity": "meno_cloveka"}
+    - [Peter]{"entity": "meno_cloveka"}
+    - [Pavol]{"entity": "meno_cloveka"}
+    - [Petra]{"entity": "meno_cloveka"}
+    - [Melánia]{"entity": "meno_cloveka"}
+    - [Diana]{"entity": "meno_cloveka"}
+    - [Berta]{"entity": "meno_cloveka"}
+    - [Miloslav]{"entity": "meno_cloveka"}
+    - [Prokop]{"entity": "meno_cloveka"}
+    - [Cyril]{"entity": "meno_cloveka"}
+    - [Metod]{"entity": "meno_cloveka"}
+    - [Patrik]{"entity": "meno_cloveka"}
+    - [Patrícia]{"entity": "meno_cloveka"}
+    - [Oliver]{"entity": "meno_cloveka"}
+    - [Ivan]{"entity": "meno_cloveka"}
+    - [Lujza]{"entity": "meno_cloveka"}
+    - [Amália]{"entity": "meno_cloveka"}
+    - [Milota]{"entity": "meno_cloveka"}
+    - [Nina]{"entity": "meno_cloveka"}
+    - [Margita]{"entity": "meno_cloveka"}
+    - [Kamil]{"entity": "meno_cloveka"}
+    - [Henrich]{"entity": "meno_cloveka"}
+    - [Drahomír]{"entity": "meno_cloveka"}
+    - [Drahomíra]{"entity": "meno_cloveka"}
+    - [Rút]{"entity": "meno_cloveka"}
+    - [Bohuslav]{"entity": "meno_cloveka"}
+    - [Kamila]{"entity": "meno_cloveka"}
+    - [Dušana]{"entity": "meno_cloveka"}
+    - [Iľja]{"entity": "meno_cloveka"}
+    - [Eliáš]{"entity": "meno_cloveka"}
+    - [Daniel]{"entity": "meno_cloveka"}
+    - [Magdaléna]{"entity": "meno_cloveka"}
+    - [Oľga]{"entity": "meno_cloveka"}
+    - [Vladimír]{"entity": "meno_cloveka"}
+    - [Jakub]{"entity": "meno_cloveka"}
+    - [Timur]{"entity": "meno_cloveka"}
+    - [Anna]{"entity": "meno_cloveka"}
+    - [Hana]{"entity": "meno_cloveka"}
+    - [Anita]{"entity": "meno_cloveka"}
+    - [Aneta]{"entity": "meno_cloveka"}
+    - [Božena]{"entity": "meno_cloveka"}
+    - [Krištof]{"entity": "meno_cloveka"}
+    - [Marta]{"entity": "meno_cloveka"}
+    - [Libuša]{"entity": "meno_cloveka"}
+    - [Ignác]{"entity": "meno_cloveka"}
+    - [Božidara]{"entity": "meno_cloveka"}
+    - [Gustáv]{"entity": "meno_cloveka"}
+    - [Jerguš]{"entity": "meno_cloveka"}
+    - [Dominika]{"entity": "meno_cloveka"}
+    - [Dominik]{"entity": "meno_cloveka"}
+    - [Hortenzia]{"entity": "meno_cloveka"}
+    - [Jozefína]{"entity": "meno_cloveka"}
+    - [Štefánia]{"entity": "meno_cloveka"}
+    - [Oskar]{"entity": "meno_cloveka"}
+    - [Ľubomíra]{"entity": "meno_cloveka"}
+    - [Vavrinec]{"entity": "meno_cloveka"}
+    - [Zuzana]{"entity": "meno_cloveka"}
+    - [Darina]{"entity": "meno_cloveka"}
+    - [Ľubomír]{"entity": "meno_cloveka"}
+    - [Mojmír]{"entity": "meno_cloveka"}
+    - [Marcela]{"entity": "meno_cloveka"}
+    - [Leonard]{"entity": "meno_cloveka"}
+    - [Milica]{"entity": "meno_cloveka"}
+    - [Elena]{"entity": "meno_cloveka"}
+    - [Helena]{"entity": "meno_cloveka"}
+    - [Lýdia]{"entity": "meno_cloveka"}
+    - [Anabela]{"entity": "meno_cloveka"}
+    - [Liliana]{"entity": "meno_cloveka"}
+    - [Jana]{"entity": "meno_cloveka"}
+    - [Tichomír]{"entity": "meno_cloveka"}
+    - [Filip]{"entity": "meno_cloveka"}
+    - [Bartolomej]{"entity": "meno_cloveka"}
+    - [Ľudovít]{"entity": "meno_cloveka"}
+    - [Samuel]{"entity": "meno_cloveka"}
+    - [Silvia]{"entity": "meno_cloveka"}
+    - [Augustín]{"entity": "meno_cloveka"}
+    - [Nikola]{"entity": "meno_cloveka"}
+    - [Nikolaj]{"entity": "meno_cloveka"}
+    - [Ružena]{"entity": "meno_cloveka"}
+    - [Nora]{"entity": "meno_cloveka"}
+    - [Drahoslava]{"entity": "meno_cloveka"}
+    - [Linda]{"entity": "meno_cloveka"}
+    - [Rebeka]{"entity": "meno_cloveka"}
+    - [Belo]{"entity": "meno_cloveka"}
+    - [Rozália]{"entity": "meno_cloveka"}
+    - [Regina]{"entity": "meno_cloveka"}
+    - [Alica]{"entity": "meno_cloveka"}
+    - [Marianna]{"entity": "meno_cloveka"}
+    - [Miriama]{"entity": "meno_cloveka"}
+    - [Martina]{"entity": "meno_cloveka"}
+    - [Oleg]{"entity": "meno_cloveka"}
+    - [Bystrík]{"entity": "meno_cloveka"}
+    - [Mária]{"entity": "meno_cloveka"}
+    - [Marlena]{"entity": "meno_cloveka"}
+    - [Ctibor]{"entity": "meno_cloveka"}
+    - [Ľudomil]{"entity": "meno_cloveka"}
+    - [Jolana]{"entity": "meno_cloveka"}
+    - [Ľudmila]{"entity": "meno_cloveka"}
+    - [Olympia]{"entity": "meno_cloveka"}
+    - [Eugénia]{"entity": "meno_cloveka"}
+    - [Konštantín]{"entity": "meno_cloveka"}
+    - [Ľuboslav]{"entity": "meno_cloveka"}
+    - [Ľuboslava]{"entity": "meno_cloveka"}
+    - [Matúš]{"entity": "meno_cloveka"}
+    - [Móric]{"entity": "meno_cloveka"}
+    - [Zdenka]{"entity": "meno_cloveka"}
+    - [Ľuboš]{"entity": "meno_cloveka"}
+    - [Ľubor]{"entity": "meno_cloveka"}
+    - [Vladislav]{"entity": "meno_cloveka"}
+    - [Vladislava]{"entity": "meno_cloveka"}
+    - [Edita]{"entity": "meno_cloveka"}
+    - [Cyprián]{"entity": "meno_cloveka"}
+    - [Václav]{"entity": "meno_cloveka"}
+    - [Michal]{"entity": "meno_cloveka"}
+    - [Michaela]{"entity": "meno_cloveka"}
+    - [Jarolím]{"entity": "meno_cloveka"}
+    - [Arnold]{"entity": "meno_cloveka"}
+    - [Levoslav]{"entity": "meno_cloveka"}
+    - [Stela]{"entity": "meno_cloveka"}
+    - [František]{"entity": "meno_cloveka"}
+    - [Viera]{"entity": "meno_cloveka"}
+    - [Natália]{"entity": "meno_cloveka"}
+    - [Eliška]{"entity": "meno_cloveka"}
+    - [Brigita]{"entity": "meno_cloveka"}
+    - [Dionýz]{"entity": "meno_cloveka"}
+    - [Slavomíra]{"entity": "meno_cloveka"}
+    - [Valentína]{"entity": "meno_cloveka"}
+    - [Maximilián]{"entity": "meno_cloveka"}
+    - [Koloman]{"entity": "meno_cloveka"}
+    - [Boris]{"entity": "meno_cloveka"}
+    - [Terézia]{"entity": "meno_cloveka"}
+    - [Vladimíra]{"entity": "meno_cloveka"}
+    - [Hedviga]{"entity": "meno_cloveka"}
+    - [Lukáš]{"entity": "meno_cloveka"}
+    - [Kristián]{"entity": "meno_cloveka"}
+    - [Vendelín]{"entity": "meno_cloveka"}
+    - [Uršuľa]{"entity": "meno_cloveka"}
+    - [Sergej]{"entity": "meno_cloveka"}
+    - [Alojzia]{"entity": "meno_cloveka"}
+    - [Kvetoslava]{"entity": "meno_cloveka"}
+    - [Aurel]{"entity": "meno_cloveka"}
+    - [Demeter]{"entity": "meno_cloveka"}
+    - [Sabína]{"entity": "meno_cloveka"}
+    - [Dobromila]{"entity": "meno_cloveka"}
+    - [Klára]{"entity": "meno_cloveka"}
+    - [Šimon]{"entity": "meno_cloveka"}
+    - [Simona]{"entity": "meno_cloveka"}
+    - [Aurélia]{"entity": "meno_cloveka"}
+    - [Denis]{"entity": "meno_cloveka"}
+    - [Denisa]{"entity": "meno_cloveka"}
+    - [Hubert]{"entity": "meno_cloveka"}
+    - [Karol]{"entity": "meno_cloveka"}
+    - [Imrich]{"entity": "meno_cloveka"}
+    - [Renáta]{"entity": "meno_cloveka"}
+    - [René]{"entity": "meno_cloveka"}
+    - [Bohumír]{"entity": "meno_cloveka"}
+    - [Teodor]{"entity": "meno_cloveka"}
+    - [Tibor]{"entity": "meno_cloveka"}
+    - [Martin]{"entity": "meno_cloveka"}
+    - [Maroš]{"entity": "meno_cloveka"}
+    - [Svätopluk]{"entity": "meno_cloveka"}
+    - [Stanislav]{"entity": "meno_cloveka"}
+    - [Irma]{"entity": "meno_cloveka"}
+    - [Leopold]{"entity": "meno_cloveka"}
+    - [Agnesa]{"entity": "meno_cloveka"}
+    - [Klaudia]{"entity": "meno_cloveka"}
+    - [Eugen]{"entity": "meno_cloveka"}
+    - [Alžbeta]{"entity": "meno_cloveka"}
+    - [Félix]{"entity": "meno_cloveka"}
+    - [Elvíra]{"entity": "meno_cloveka"}
+    - [Cecília]{"entity": "meno_cloveka"}
+    - [Klement]{"entity": "meno_cloveka"}
+    - [Emília]{"entity": "meno_cloveka"}
+    - [Katarína]{"entity": "meno_cloveka"}
+    - [Kornel]{"entity": "meno_cloveka"}
+    - [Milan]{"entity": "meno_cloveka"}
+    - [Henrieta]{"entity": "meno_cloveka"}
+    - [Vratko]{"entity": "meno_cloveka"}
+    - [Ondrej]{"entity": "meno_cloveka"}
+    - [Andrej]{"entity": "meno_cloveka"}
+    - [Edmund]{"entity": "meno_cloveka"}
+    - [Bibiána]{"entity": "meno_cloveka"}
+    - [Oldrich]{"entity": "meno_cloveka"}
+    - [Barbora]{"entity": "meno_cloveka"}
+    - [Oto]{"entity": "meno_cloveka"}
+    - [Mikuláš]{"entity": "meno_cloveka"}
+    - [Ambróz]{"entity": "meno_cloveka"}
+    - [Marína]{"entity": "meno_cloveka"}
+    - [Izabela]{"entity": "meno_cloveka"}
+    - [Radúz]{"entity": "meno_cloveka"}
+    - [Hilda]{"entity": "meno_cloveka"}
+    - [Otília]{"entity": "meno_cloveka"}
+    - [Lucia]{"entity": "meno_cloveka"}
+    - [Branislava]{"entity": "meno_cloveka"}
+    - [Ivica]{"entity": "meno_cloveka"}
+    - [Albína]{"entity": "meno_cloveka"}
+    - [Kornélia]{"entity": "meno_cloveka"}
+    - [Sláva]{"entity": "meno_cloveka"}
+    - [Judita]{"entity": "meno_cloveka"}
+    - [Dagmara]{"entity": "meno_cloveka"}
+    - [Bohdan]{"entity": "meno_cloveka"}
+    - [Adela]{"entity": "meno_cloveka"}
+    - [Nadežda]{"entity": "meno_cloveka"}
+    - [Adam]{"entity": "meno_cloveka"}
+    - [Eva]{"entity": "meno_cloveka"}
+    - [Štefan]{"entity": "meno_cloveka"}
+    - [Filoména]{"entity": "meno_cloveka"}
+    - [Ivana]{"entity": "meno_cloveka"}
+    - [Ivona]{"entity": "meno_cloveka"}
+    - [Milada]{"entity": "meno_cloveka"}
+    - [Dávid]{"entity": "meno_cloveka"}
+    - [Silvester]{"entity": "meno_cloveka"}    
+- regex: meno_cloveka
+  examples: |
+    - ^[A-Z][a-z]* [A-Z][a-z]*$
+    - ^[A-Z][a-z]*$    
+
+- intent: inform_priezvisko
+  examples: |
+    - [priezvisko]{"entity": "priezvisko_cloveka", "value": "- - -"}
+    - moje priezvisko je [Scislak]{"entity": "priezvisko_cloveka"}
+    - priezvisko je [Jablko]{"entity": "priezvisko_cloveka"}
+    - priezvisko [Jumen]{"entity": "priezvisko_cloveka"}    
+- regex: priezvisko_clovela
+  examples: |
+    - ^[A-Z][a-z]*$
+        
+- intent: inform_rodne_cislo
+  examples: |
+    - [0]{"entity": "rodne_cislo", "value": "- - -"}
+    - moje rodne cislo je [123456/7890]{"entity": "rodne_cislo"}
+    - moje rodné číslo je [347600/3099]{"entity": "rodne_cislo"}
+    - Moje rodne cislo je [123456/7800]{"entity": "rodne_cislo"}
+    - Moje rodné číslo je [347600/3299]{"entity": "rodne_cislo"}
+    - rodne cislo [987654/3210]{"entity": "rodne_cislo"}
+    - rodné číslo [982654/3210]{"entity": "rodne_cislo"}
+    - Rodne cislo [111122/2233]{"entity": "rodne_cislo"}
+    - Rodné číslo [111122/2293]{"entity": "rodne_cislo"}
+    - rodne cislo je [980654/3210]{"entity": "rodne_cislo"}
+    - rodné číslo je [981654/3210]{"entity": "rodne_cislo"}
+    - Rodne cislo je [115122/2233]{"entity": "rodne_cislo"}
+    - Rodné číslo je [114122/2293]{"entity": "rodne_cislo"}
+    - rodne cislo mam [280654/3210]{"entity": "rodne_cislo"}
+    - rodné číslo mám [181654/3210]{"entity": "rodne_cislo"}
+    - Rodne cislo mam [915122/2233]{"entity": "rodne_cislo"}
+    - Rodné číslo mám [014122/2293]{"entity": "rodne_cislo"}
+    - mam rodne cislo [014722/2293]{"entity": "rodne_cislo"}
+    - Mam rodne cislo [014722/2593]{"entity": "rodne_cislo"}
+    - mám rodné číslo [014722/1293]{"entity": "rodne_cislo"}
+    - Mám rodné číslo [014700/2293]{"entity": "rodne_cislo"}
+    - [123456/7890]{"entity": "rodne_cislo"}    
+- regex: rodne_cislo
+  examples: |
+    - ^\d{6}/\d{4}$
+        
+- intent: inform_datum_narodenia
+  examples: |
+    - moj datum narodenia je [01.05.1990]{"entity": "datum_narodenia"}
+    - môj dátum narodenia je [1.05.1996]{"entity": "datum_narodenia"}
+    - Moj datum narodenia je [21.05.2010]{"entity": "datum_narodenia"}
+    - Môj dátum narodenia je [1.4.1986]{"entity": "datum_narodenia"}
+    - datum narodenia [15.12.1985]{"entity": "datum_narodenia"}
+    - dátum narodenia [11.11.1966]{"entity": "datum_narodenia"}
+    - Datum narodenia [7.3.2002]{"entity": "datum_narodenia"}
+    - Dátum narodenia [5.08.2001]{"entity": "datum_narodenia"}
+    - Mam datum narodenia [10.03.2000]{"entity": "datum_narodenia"}
+    - mam datum narodenia [10.09.2003]{"entity": "datum_narodenia"}
+    - Mám dátum narodenia [9.7.2004]{"entity": "datum_narodenia"}
+    - mám dátum narodenia [28.10.2005]{"entity": "datum_narodenia"}
+    - [1.1.1999]{"entity": "datum_narodenia"}     
+- regex: datum_narodenia
+  examples: |
+    - ^\d{2}\.\d{2}\.\d{4}$
+    - ^\d{1}\.\d{2}\.\d{4}$ 
+    - ^\d{1}\.\d{1}\.\d{4}$    
+
+- intent: inform_ulica
+  examples: |
+    - moja ulica je [Abovská]{"entity": "ulica"}
+    - adresa na ulici [Adamova]{"entity": "ulica"}
+    - ulica [Adlerova]{"entity": "ulica"}
+    - ulica je [Agátová]{"entity": "ulica"}
+    - [Alejová]{"entity": "ulica"}
+    - [Alešovo nábrežie]{"entity": "ulica"}
+    - [Alšavská]{"entity": "ulica"}
+    - [Alvinczyho]{"entity": "ulica"}
+    - [Alžbetina]{"entity": "ulica"}
+    - [Americká trieda]{"entity": "ulica"}
+    - [Amurská]{"entity": "ulica"}
+    - [Andraščíkova]{"entity": "ulica"}
+    - [Aničkin park]{"entity": "ulica"}
+    - [Aténska]{"entity": "ulica"}
+    - [Atletická]{"entity": "ulica"}
+    - [Austrálska trieda]{"entity": "ulica"}
+    - [Azijská trieda]{"entity": "ulica"}
+    - [Azovská]{"entity": "ulica"}
+    - [Bačíkova]{"entity": "ulica"}
+    - [Bahýľova]{"entity": "ulica"}
+    - [Bajzova]{"entity": "ulica"}
+    - [Baltická]{"entity": "ulica"}
+    - [Banícka]{"entity": "ulica"}
+    - [Baničova]{"entity": "ulica"}
+    - [Bankov]{"entity": "ulica"}
+    - [Barčianska]{"entity": "ulica"}
+    - [Bardejovská]{"entity": "ulica"}
+    - [Baštová]{"entity": "ulica"}
+    - [Bašťovanského]{"entity": "ulica"}
+    - [Bauerova]{"entity": "ulica"}
+    - [Bazalková]{"entity": "ulica"}
+    - [Bazová]{"entity": "ulica"}
+    - [Bažantia]{"entity": "ulica"}
+    - [Bedľová ulica]{"entity": "ulica"}
+    - [Belanská]{"entity": "ulica"}
+    - [Belehradská]{"entity": "ulica"}
+    - [Bellova]{"entity": "ulica"}
+    - [Benadova]{"entity": "ulica"}
+    - [Bencúrova]{"entity": "ulica"}
+    - [Benediktínska]{"entity": "ulica"}
+    - [Beniakova]{"entity": "ulica"}
+    - [Benkova]{"entity": "ulica"}
+    - [Berlínska]{"entity": "ulica"}
+    - [Bernatovská]{"entity": "ulica"}
+    - [Bernolákova]{"entity": "ulica"}
+    - [Berzeviczyho]{"entity": "ulica"}
+    - [Beskydská]{"entity": "ulica"}
+    - [Betliarska]{"entity": "ulica"}
+    - [Bezručova]{"entity": "ulica"}
+    - [Bežecká]{"entity": "ulica"}
+    - [Biela]{"entity": "ulica"}
+    - [Bialocerkevská]{"entity": "ulica"}
+    - [Bielohorská ulica]{"entity": "ulica"}
+    - [Bielych albatrosov]{"entity": "ulica"}
+    - [Blatná]{"entity": "ulica"}
+    - [Blesková]{"entity": "ulica"}
+    - [Bocatiova]{"entity": "ulica"}
+    - [Bočiarska]{"entity": "ulica"}
+    - [Bočná]{"entity": "ulica"}
+    - [Borievková]{"entity": "ulica"}
+    - [Borodáčova]{"entity": "ulica"}
+    - [Borovicová]{"entity": "ulica"}
+    - [Bosákova]{"entity": "ulica"}
+    - [Bottova]{"entity": "ulica"}
+    - [Branisková]{"entity": "ulica"}
+    - [Bratislavská]{"entity": "ulica"}
+    - [Brečtanová]{"entity": "ulica"}
+    - [Brestová]{"entity": "ulica"}
+    - [Breznianska]{"entity": "ulica"}
+    - [Brezová]{"entity": "ulica"}
+    - [Brigádnická]{"entity": "ulica"}
+    - [Brnenská]{"entity": "ulica"}
+    - [Brodná]{"entity": "ulica"}
+    - [Bronzová]{"entity": "ulica"}
+    - [Bruselská]{"entity": "ulica"}
+    - [Brusnicová]{"entity": "ulica"}
+    - [Budanová]{"entity": "ulica"}
+    - [Budapeštianska]{"entity": "ulica"}
+    - [Budovateľská]{"entity": "ulica"}
+    - [Buková]{"entity": "ulica"}
+    - [Bukovecká]{"entity": "ulica"}
+    - [Bukureštská]{"entity": "ulica"}
+    - [Bulharská]{"entity": "ulica"}
+    - [Buzinská]{"entity": "ulica"}
+    - [Buzulucká]{"entity": "ulica"}
+    - [Bystrická]{"entity": "ulica"}
+    - [Cesta do Hanisky]{"entity": "ulica"}
+    - [Cesta na Jahodnú]{"entity": "ulica"}
+    - [Cesta pod Hradovou]{"entity": "ulica"}
+    - [Cezmínová]{"entity": "ulica"}
+    - [Cikkerova ulica]{"entity": "ulica"}
+    - [Cikkerova]{"entity": "ulica"}
+    - [Cimborkova]{"entity": "ulica"}
+    - [Cínová]{"entity": "ulica"}
+    - [Cintorínska]{"entity": "ulica"}
+    - [Cirbusovej]{"entity": "ulica"}
+    - [Clementisova]{"entity": "ulica"}
+    - [Cottbuská]{"entity": "ulica"}
+    - [Cyklistická]{"entity": "ulica"}
+    - [Cyprusová]{"entity": "ulica"}
+    - [Czambelova]{"entity": "ulica"}
+    - [Čajakova]{"entity": "ulica"}
+    - [Čajkovského]{"entity": "ulica"}
+    - [Čapajevova]{"entity": "ulica"}
+    - [Čárskeho]{"entity": "ulica"}
+    - [Čechovova]{"entity": "ulica"}
+    - [Čerešňová]{"entity": "ulica"}
+    - [Čergovská]{"entity": "ulica"}
+    - [Čermeľská cesta]{"entity": "ulica"}
+    - [Čermeľské prielohy]{"entity": "ulica"}
+    - [Čermeľské údolie]{"entity": "ulica"}
+    - [Červený breh]{"entity": "ulica"}
+    - [Červený rak]{"entity": "ulica"}
+    - [Česká]{"entity": "ulica"}
+    - [Československého odboja]{"entity": "ulica"}
+    - [Československj armády]{"entity": "ulica"}
+    - [Čičky-majer]{"entity": "ulica"}
+    - [Čiernomorská]{"entity": "ulica"}
+    - [Čingovská]{"entity": "ulica"}
+    - [Čínska]{"entity": "ulica"}
+    - [Čkalovova]{"entity": "ulica"}
+    - [Člnková]{"entity": "ulica"}
+    - [Čordákova]{"entity": "ulica"}
+    - [Chalupkova]{"entity": "ulica"}
+    - [Charkovská]{"entity": "ulica"}
+    - [Chmeľníky]{"entity": "ulica"}
+    - [Chrastie]{"entity": "ulica"}
+    - [Chrómová]{"entity": "ulica"}
+    - [Dargovská]{"entity": "ulica"}
+    - [Ďatelinová]{"entity": "ulica"}
+    - [Dénešova]{"entity": "ulica"}
+    - [Detvianska]{"entity": "ulica"}
+    - [Diamantová]{"entity": "ulica"}
+    - [Dneperská]{"entity": "ulica"}
+    - [Dobšinského]{"entity": "ulica"}
+    - [Domčeková]{"entity": "ulica"}
+    - [Dominikánske námestie]{"entity": "ulica"}
+    - [Donská]{"entity": "ulica"}
+    - [Dopravná]{"entity": "ulica"}
+    - [Dr. Kostlivého]{"entity": "ulica"}
+    - [Drabova]{"entity": "ulica"}
+    - [Drevný trh]{"entity": "ulica"}
+    - [Drieňová]{"entity": "ulica"}
+    - [Drocárov park]{"entity": "ulica"}
+    - [Drozdia]{"entity": "ulica"}
+    - [Družicová]{"entity": "ulica"}
+    - [Družstevná]{"entity": "ulica"}
+    - [Dubová]{"entity": "ulica"}
+    - [Dúbravská]{"entity": "ulica"}
+    - [Dúhová]{"entity": "ulica"}
+    - [Dulová ulica]{"entity": "ulica"}
+    - [Dulová]{"entity": "ulica"}
+    - [Ďumbierska]{"entity": "ulica"}
+    - [Dunajská]{"entity": "ulica"}
+    - [Dvorkinova]{"entity": "ulica"}
+    - [Edisonova]{"entity": "ulica"}
+    - [Európska trieda]{"entity": "ulica"}
+    - [Exnárova]{"entity": "ulica"}
+    - [Fábryho]{"entity": "ulica"}
+    - [Fakľová]{"entity": "ulica"}
+    - [Fándlyho]{"entity": "ulica"}
+    - [Fatranská]{"entity": "ulica"}
+    - [Fejova]{"entity": "ulica"}
+    - [Feketeova pažiť]{"entity": "ulica"}
+    - [Feldov park]{"entity": "ulica"}
+    - [Festivalové námestie]{"entity": "ulica"}
+    - [Fialková]{"entity": "ulica"}
+    - [Fibichova]{"entity": "ulica"}
+    - [Fiľakovská]{"entity": "ulica"}
+    - [Floriánska]{"entity": "ulica"}
+    - [Franckova]{"entity": "ulica"}
+    - [Františkánska]{"entity": "ulica"}
+    - [Furčianska]{"entity": "ulica"}
+    - [Gagarinovo námestie]{"entity": "ulica"}
+    - [Galaktická]{"entity": "ulica"}
+    - [Galgovecká]{"entity": "ulica"}
+    - [Garbiarska]{"entity": "ulica"}
+    - [Gaštanová]{"entity": "ulica"}
+    - [Gavlovičova]{"entity": "ulica"}
+    - [Gazdovská]{"entity": "ulica"}
+    - [Gelnická]{"entity": "ulica"}
+    - [Gemerská]{"entity": "ulica"}
+    - [Gerlachovská]{"entity": "ulica"}
+    - [Goetheho]{"entity": "ulica"}
+    - [Gogoľova]{"entity": "ulica"}
+    - [Goldírova]{"entity": "ulica"}
+    - [Golianova]{"entity": "ulica"}
+    - [Gorkého]{"entity": "ulica"}
+    - [Gorovecká]{"entity": "ulica"}
+    - [Grešákova]{"entity": "ulica"}
+    - [Grófska ulica]{"entity": "ulica"}
+    - [Gudernova]{"entity": "ulica"}
+    - [Haburská]{"entity": "ulica"}
+    - [Hájnická]{"entity": "ulica"}
+    - [Hájska ulica]{"entity": "ulica"}
+    - [Hájska]{"entity": "ulica"}
+    - [Hanojská]{"entity": "ulica"}
+    - [Harčarova]{"entity": "ulica"}
+    - [Harmančeková]{"entity": "ulica"}
+    - [Harmincova]{"entity": "ulica"}
+    - [Havanská]{"entity": "ulica"}
+    - [Haviarska]{"entity": "ulica"}
+    - [Havlíčkova]{"entity": "ulica"}
+    - [Hečkova]{"entity": "ulica"}
+    - [Hellova]{"entity": "ulica"}
+    - [Helsinská]{"entity": "ulica"}
+    - [Hemerkova]{"entity": "ulica"}
+    - [Herlianska]{"entity": "ulica"}
+    - [Heydukova]{"entity": "ulica"}
+    - [Hlavná]{"entity": "ulica"}
+    - [Hlavné námestie]{"entity": "ulica"}
+    - [Hlinkova]{"entity": "ulica"}
+    - [Hlohová]{"entity": "ulica"}
+    - [Hodonínska]{"entity": "ulica"}
+    - [Hollého]{"entity": "ulica"}
+    - [Holubyho]{"entity": "ulica"}
+    - [Horná]{"entity": "ulica"}
+    - [Hornádska]{"entity": "ulica"}
+    - [Horolezecká]{"entity": "ulica"}
+    - [Horovova]{"entity": "ulica"}
+    - [Hrabová]{"entity": "ulica"}
+    - [Hradbová]{"entity": "ulica"}
+    - [Hraničná]{"entity": "ulica"}
+    - [Hrbová]{"entity": "ulica"}
+    - [Hrebendova]{"entity": "ulica"}
+    - [Hríbová ulica]{"entity": "ulica"}
+    - [Hríbová]{"entity": "ulica"}
+    - [Hrnčiarska]{"entity": "ulica"}
+    - [Hroncova]{"entity": "ulica"}
+    - [Hronská]{"entity": "ulica"}
+    - [Humenská]{"entity": "ulica"}
+    - [Huncovská]{"entity": "ulica"}
+    - [Hurbanova]{"entity": "ulica"}
+    - [Husárska]{"entity": "ulica"}
+    - [Húskova]{"entity": "ulica"}
+    - [Hutnícka]{"entity": "ulica"}
+    - [Hviezdoslavova]{"entity": "ulica"}
+    - [Hvozdíkov park]{"entity": "ulica"}
+    - [Idanská]{"entity": "ulica"}
+    - [Inovecká ulica]{"entity": "ulica"}
+    - [Inovecká]{"entity": "ulica"}
+    - [Inžinierska]{"entity": "ulica"}
+    - [Ipeľská]{"entity": "ulica"}
+    - [Irkutská]{"entity": "ulica"}
+    - [Jabloňová]{"entity": "ulica"}
+    - [Jačmenná]{"entity": "ulica"}
+    - [Jahodová]{"entity": "ulica"}
+    - [Jakobyho]{"entity": "ulica"}
+    - [Jaltská]{"entity": "ulica"}
+    - [Jána Pavla II]{"entity": "ulica"}
+    - [Janigova]{"entity": "ulica"}
+    - [Janitorova]{"entity": "ulica"}
+    - [Jánošíkova]{"entity": "ulica"}
+    - [Jantárová]{"entity": "ulica"}
+    - [Jantárové námestie]{"entity": "ulica"}
+    - [Jarabinová]{"entity": "ulica"}
+    - [Jarková]{"entity": "ulica"}
+    - [Jarmočná]{"entity": "ulica"}
+    - [Jarná]{"entity": "ulica"}
+    - [Jaseňová]{"entity": "ulica"}
+    - [Jasovská]{"entity": "ulica"}
+    - [Jasuschova{"entity": "ulica"}
+    - [Javorová]{"entity": "ulica"}
+    - [Jazdecká]{"entity": "ulica"}
+    - [Jazerná]{"entity": "ulica"}
+    - [Jazmínová]{"entity": "ulica"}
+    - [Jazvečia]{"entity": "ulica"}
+    - [Jedlíkova]{"entity": "ulica"}
+    - [Jedľová]{"entity": "ulica"}
+    - [Jegorovo námestie]{"entity": "ulica"}
+    - [Jelenia]{"entity": "ulica"}
+    - [Jelšavská]{"entity": "ulica"}
+    - [Jelšová]{"entity": "ulica"}
+    - [Jenisejská]{"entity": "ulica"}
+    - [Jesenná]{"entity": "ulica"}
+    - [Jesenského]{"entity": "ulica"}
+    - [Jihlavská]{"entity": "ulica"}
+    - [Jilemnického]{"entity": "ulica"}
+    - [Jiskrova]{"entity": "ulica"}
+    - [Juhoslovanská]{"entity": "ulica"}
+    - [Junácka]{"entity": "ulica"}
+    - [Južná trieda]{"entity": "ulica"}
+    - [Južné nábrežie]{"entity": "ulica"}
+    - [K ihrisku]{"entity": "ulica"}
+    - [K lesu]{"entity": "ulica"}
+    - [K letisku]{"entity": "ulica"}
+    - [K majeru]{"entity": "ulica"}
+    - [Kadlubská]{"entity": "ulica"}
+    - [Kalinčiakova]{"entity": "ulica"}
+    - [Kalinovská]{"entity": "ulica"}
+    - [Kameničná]{"entity": "ulica"}
+    - [Kamenná]{"entity": "ulica"}
+    - [Kapustná]{"entity": "ulica"}
+    - [Karlovarská]{"entity": "ulica"}
+    - [Karmelitánska ulica]{"entity": "ulica"}
+    - [Karmelitánska]{"entity": "ulica"}
+    - [Karpatská]{"entity": "ulica"}
+    - [Kasárenské námestie]{"entity": "ulica"}
+    - [Kaspická]{"entity": "ulica"}
+    - [Kaštieľna]{"entity": "ulica"}
+    - [Katkin park]{"entity": "ulica"}
+    - [Kavečianska cesta]{"entity": "ulica"}
+    - [Keldišova]{"entity": "ulica"}
+    - [Kertésova]{"entity": "ulica"}
+    - [Kežmarská]{"entity": "ulica"}
+    - [Kisdyho]{"entity": "ulica"}
+    - [Kladenská]{"entity": "ulica"}
+    - [Klimkovičova]{"entity": "ulica"}
+    - [Klinčeková]{"entity": "ulica"}
+    - [Kmeťova]{"entity": "ulica"}
+    - [Komenského]{"entity": "ulica"}
+    - [Komenského park]{"entity": "ulica"}
+    - [Končistá]{"entity": "ulica"}
+    - [Konopná]{"entity": "ulica"}
+    - [Konvalinková]{"entity": "ulica"}
+    - [Kopečná]{"entity": "ulica"}
+    - [Kórejská]{"entity": "ulica"}
+    - [Korýtková]{"entity": "ulica"}
+    - [Kosatcová]{"entity": "ulica"}
+    - [Kostolianska cesta]{"entity": "ulica"}
+    - [Kostolná]{"entity": "ulica"}
+    - [Kostrova]{"entity": "ulica"}
+    - [Košťova]{"entity": "ulica"}
+    - [Kováčska]{"entity": "ulica"}
+    - [Kovaľská]{"entity": "ulica"}
+    - [Kozáková ulica]{"entity": "ulica"}
+    - [Kozákova]{"entity": "ulica"}
+    - [Kpt. Jaroša]{"entity": "ulica"}
+    - [Kpt. Nálepku]{"entity": "ulica"}
+    - [Krajná]{"entity": "ulica"}
+    - [Krakovská]{"entity": "ulica"}
+    - [Králičia]{"entity": "ulica"}
+    - [Krasiňského]{"entity": "ulica"}
+    - [Krásnohorská]{"entity": "ulica"}
+    - [Krátka]{"entity": "ulica"}
+    - [Krčméryho]{"entity": "ulica"}
+    - [Kremnická]{"entity": "ulica"}
+    - [Krivá]{"entity": "ulica"}
+    - [Križinova]{"entity": "ulica"}
+    - [Križovatka Furmanec]{"entity": "ulica"}
+    - [Krmanova]{"entity": "ulica"}
+    - [Krompašská]{"entity": "ulica"}
+    - [Krosnianska]{"entity": "ulica"}
+    - [Krupinská]{"entity": "ulica"}
+    - [Ku Bangortu]{"entity": "ulica"}
+    - [Ku Gardu]{"entity": "ulica"}
+    - [Ku hájovni]{"entity": "ulica"}
+    - [Ku mlynu]{"entity": "ulica"}
+    - [Ku potoku]{"entity": "ulica"}
+    - [Ku štrkovisku]{"entity": "ulica"}
+    - [Kubíková]{"entity": "ulica"}
+    - [Kukučínova]{"entity": "ulica"}
+    - [Kukuričná]{"entity": "ulica"}
+    - [Kupeckého]{"entity": "ulica"}
+    - [Kurská]{"entity": "ulica"}
+    - [Kustrova]{"entity": "ulica"}
+    - [Kuzmányho]{"entity": "ulica"}
+    - [Kvetná]{"entity": "ulica"}
+    - [Kysucká]{"entity": "ulica"}
+    - [Laborecká]{"entity": "ulica"}
+    - [Lackova]{"entity": "ulica"}
+    - [Ladožská]{"entity": "ulica"}
+    - [Ľanová]{"entity": "ulica"}
+    - [Lechkého ulica]{"entity": "ulica"}
+    - [Lechkého]{"entity": "ulica"}
+    - [Lermontovova]{"entity": "ulica"}
+    - [Lesná]{"entity": "ulica"}
+    - [Lesnícka]{"entity": "ulica"}
+    - [Letecká]{"entity": "ulica"}
+    - [Letná]{"entity": "ulica"}
+    - [Levanduľová]{"entity": "ulica"}
+    - [Levická]{"entity": "ulica"}
+    - [Levočská]{"entity": "ulica"}
+    - [Lidické námestie]{"entity": "ulica"}
+    - [Liesková]{"entity": "ulica"}
+    - [Lichardova]{"entity": "ulica"}
+    - [Limbová ulica]{"entity": "ulica"}
+    - [Limbová]{"entity": "ulica"}
+    - [Lipová]{"entity": "ulica"}
+    - [Liptovská]{"entity": "ulica"}
+    - [Lofflerova]{"entity": "ulica"}
+    - [Löfflerova]{"entity": "ulica"}
+    - [Lomená]{"entity": "ulica"}
+    - [Lomnická]{"entity": "ulica"}
+    - [Lomonosovova]{"entity": "ulica"}
+    - [Londýnska]{"entity": "ulica"}
+    - [Lorinčícka ulica]{"entity": "ulica"}
+    - [Lorinčícka]{"entity": "ulica"}
+    - [Lorinčík]{"entity": "ulica"}
+    - [Lovecká]{"entity": "ulica"}
+    - [Lubina]{"entity": "ulica"}
+    - [Lučenecká]{"entity": "ulica"}
+    - [Lúčna]{"entity": "ulica"}
+    - [Lučnicová ulica]{"entity": "ulica"}
+    - [Lučnicová]{"entity": "ulica"}
+    - [Ludmanská]{"entity": "ulica"}
+    - [Ľudová]{"entity": "ulica"}
+    - [Ludvíkov dvor]{"entity": "ulica"}
+    - [Lupkovská]{"entity": "ulica"}
+    - [Lyžiarska]{"entity": "ulica"}
+    - [Macákova]{"entity": "ulica"}
+    - [Maďarská]{"entity": "ulica"}
+    - [Madridská]{"entity": "ulica"}
+    - [Magdalénska]{"entity": "ulica"}
+    - [Magnezitárska]{"entity": "ulica"}
+    - [Magurská]{"entity": "ulica"}
+    - [Májová]{"entity": "ulica"}
+    - [Maková ulica]{"entity": "ulica"}
+    - [Maková]{"entity": "ulica"}
+    - [Malá]{"entity": "ulica"}
+    - [Malinová]{"entity": "ulica"}
+    - [Maloidanská]{"entity": "ulica"}
+    - [Mánesova]{"entity": "ulica"}
+    - [Markušova]{"entity": "ulica"}
+    - [Maršala Koneva]{"entity": "ulica"}
+    - [Martinská]{"entity": "ulica"}
+    - [Masarykova]{"entity": "ulica"}
+    - [Maša]{"entity": "ulica"}
+    - [Matičná]{"entity": "ulica"}
+    - [Matuškova]{"entity": "ulica"}
+    - [Maurerova]{"entity": "ulica"}
+    - [Masiarska]{"entity": "ulica"}
+    - [Mäsiarska]{"entity": "ulica"}
+    - [Medená]{"entity": "ulica"}
+    - [Medická]{"entity": "ulica"}
+    - [Medzevská]{"entity": "ulica"}
+    - [Medzi mostami]{"entity": "ulica"}
+    - [Mengusovská]{"entity": "ulica"}
+    - [Mestský park]{"entity": "ulica"}
+    - [Meškova]{"entity": "ulica"}
+    - [Meteorová]{"entity": "ulica"}
+    - [Mierová]{"entity": "ulica"}
+    - [Michalovská]{"entity": "ulica"}
+    - [Mikovíniho]{"entity": "ulica"}
+    - [Milosrdenstva]{"entity": "ulica"}
+    - [Minská]{"entity": "ulica"}
+    - [Miškovecká]{"entity": "ulica"}
+    - [Mladežnícka]{"entity": "ulica"}
+    - [Mliečna]{"entity": "ulica"}
+    - [Mlynárska]{"entity": "ulica"}
+    - [Mlynská]{"entity": "ulica"}
+    - [Močiarna]{"entity": "ulica"}
+    - [Modranská]{"entity": "ulica"}
+    - [Mojmírova]{"entity": "ulica"}
+    - [Moldavská cesta]{"entity": "ulica"}
+    - [Mongolská]{"entity": "ulica"}
+    - [Moravská]{"entity": "ulica"}
+    - [Mosadzná]{"entity": "ulica"}
+    - [Moskovská trieda]{"entity": "ulica"}
+    - [Moyzesova]{"entity": "ulica"}
+    - [Mozartova]{"entity": "ulica"}
+    - [Mudroňova]{"entity": "ulica"}
+    - [Muránska]{"entity": "ulica"}
+    - [Murgašova]{"entity": "ulica"}
+    - [Muškátová]{"entity": "ulica"}
+    - [Myslavská]{"entity": "ulica"}
+    - [Na banisegu]{"entity": "ulica"}
+    - [Na Brehu]{"entity": "ulica"}
+    - [Na Demetri]{"entity": "ulica"}
+    - [Na doline]{"entity": "ulica"}
+    - [Na hájiku]{"entity": "ulica"}
+    - [Na hore]{"entity": "ulica"}
+    - [Na Horke]{"entity": "ulica"}
+    - [Na Kalvárii]{"entity": "ulica"}
+    - [Na Kope]{"entity": "ulica"}
+    - [Na Kope I]{"entity": "ulica"}
+    - [Na Kope II]{"entity": "ulica"}
+    - [Na Kope III]{"entity": "ulica"}
+    - [Na Kope IV]{"entity": "ulica"}
+    - [Na Kope V]{"entity": "ulica"}
+    - [Na Kope VI]{"entity": "ulica"}
+    - [Na Kope VII]{"entity": "ulica"}
+    - [Na Kope VIII]{"entity": "ulica"}
+    - [Na Kope IX]{"entity": "ulica"}
+    - [Na Kope X]{"entity": "ulica"}
+    - [Na močidlách]{"entity": "ulica"}
+    - [Na pažiti]{"entity": "ulica"}
+    - [Na Rožku]{"entity": "ulica"}
+    - [Na sihoti]{"entity": "ulica"}
+    - [Na stráni]{"entity": "ulica"}
+    - [Maďarská]{"entity": "ulica"}
+    - [Na šajbe]{"entity": "ulica"}
+    - [Na záhumní]{"entity": "ulica"}
+    - [Nábrežná]{"entity": "ulica"}
+    - [Nad Belogradom]{"entity": "ulica"}
+    - [Nad záhradami]{"entity": "ulica"}
+    - [Námestie Jána Mathého]{"entity": "ulica"}
+    - [Námestie Košických mučeníkov]{"entity": "ulica"}
+    - [Námestie kozmonautov]{"entity": "ulica"}
+    - [Námestie L. Novomeského]{"entity": "ulica"}
+    - [Námestie Maratónu mieru]{"entity": "ulica"}
+    - [Námestie mladých poľnohospodárov]{"entity": "ulica"}
+    - [Námestie oceliarov]{"entity": "ulica"}
+    - [Námestie osloboditeľov]{"entity": "ulica"}
+    - [Námestie Sándora Máraiho]{"entity": "ulica"}
+    - [Námestie slobody]{"entity": "ulica"}
+    - [Námestie sv. Cyrila a Metoda]{"entity": "ulica"}
+    - [Námestie sv. Vavrinca]{"entity": "ulica"}
+    - [Napájadlá]{"entity": "ulica"}
+    - [Narcisová]{"entity": "ulica"}
+    - [Národná trieda]{"entity": "ulica"}
+    - [Národné námestie]{"entity": "ulica"}
+    - [Nemcovej]{"entity": "ulica"}
+    - [Němcovej]{"entity": "ulica"}
+    - [Nemessányiho]{"entity": "ulica"}
+    - [Nerudova]{"entity": "ulica"}
+    - [Nešporova]{"entity": "ulica"}
+    - [Nevädzová]{"entity": "ulica"}
+    - [Nevadzová]{"entity": "ulica"}
+    - [Niklová]{"entity": "ulica"}
+    - [Nitrianska]{"entity": "ulica"}
+    - [Nivky]{"entity": "ulica"}
+    - [Nižná úvrať]{"entity": "ulica"}
+    - [Nižné Chmeľníky]{"entity": "ulica"}
+    - [Nižné Kapustníky]{"entity": "ulica"}
+    - [Nižný Heringeš]{"entity": "ulica"}
+    - [Nová]{"entity": "ulica"}
+    - [Novobanská]{"entity": "ulica"}
+    - [Obchodná]{"entity": "ulica"}
+    - [Oblá]{"entity": "ulica"}
+    - [Obrancov mieru]{"entity": "ulica"}
+    - [Odborárska]{"entity": "ulica"}
+    - [Ochotnícka ulica]{"entity": "ulica"}
+    - [Ochotnícka]{"entity": "ulica"}
+    - [Olivová]{"entity": "ulica"}
+    - [Omská]{"entity": "ulica"}
+    - [Ondavská]{"entity": "ulica"}
+    - [Opálová]{"entity": "ulica"}
+    - [Opatovská cesta]{"entity": "ulica"}
+    - [Opátska]{"entity": "ulica"}
+    - [Oravská]{"entity": "ulica"}
+    - [Orechová]{"entity": "ulica"}
+    - [Orgovánová]{"entity": "ulica"}
+    - [Orlia]{"entity": "ulica"}
+    - [Orná]{"entity": "ulica"}
+    - [Ortoviská]{"entity": "ulica"}
+    - [Ortvaňová]{"entity": "ulica"}
+    - [Osiková]{"entity": "ulica"}
+    - [Ostravská]{"entity": "ulica"}
+    - [Ostrovského]{"entity": "ulica"}
+    - [Oštepová]{"entity": "ulica"}
+    - [Ovocná]{"entity": "ulica"}
+    - [Ovručská]{"entity": "ulica"}
+    - [Ovsená]{"entity": "ulica"}
+    - [Pajorova]{"entity": "ulica"}
+    - [Palackého]{"entity": "ulica"}
+    - [Palárikova]{"entity": "ulica"}
+    - [Palkovičova]{"entity": "ulica"}
+    - [Palmová]{"entity": "ulica"}
+    - [Panelová]{"entity": "ulica"}
+    - [Papradia]{"entity": "ulica"}
+    - [Parčík Jozefa Psotku]{"entity": "ulica"}
+    - [Park Angelinum]{"entity": "ulica"}
+    - [Park duklianskych obetí]{"entity": "ulica"}
+    - [Park mládeže]{"entity": "ulica"}
+    - [Park obrancov mieru]{"entity": "ulica"}
+    - [Partizánska]{"entity": "ulica"}
+    - [Pasienková]{"entity": "ulica"}
+    - [Pasteurova]{"entity": "ulica"}
+    - [Pasteurovo námestie]{"entity": "ulica"}
+    - [Paulínyho]{"entity": "ulica"}
+    - [Pažitná]{"entity": "ulica"}
+    - [Pekinská]{"entity": "ulica"}
+    - [Pekná]{"entity": "ulica"}
+    - [Perešská]{"entity": "ulica"}
+    - [Perlová]{"entity": "ulica"}
+    - [Petzvalova]{"entity": "ulica"}
+    - [Pezinská]{"entity": "ulica"}
+    - [Pieninská]{"entity": "ulica"}
+    - [Piesočná]{"entity": "ulica"}
+    - [Piešťanská]{"entity": "ulica"}
+    - [Platanová]{"entity": "ulica"}
+    - [Platinová]{"entity": "ulica"}
+    - [Plávková ulica]{"entity": "ulica"}
+    - [Plávková]{"entity": "ulica"}
+    - [Plťová]{"entity": "ulica"}
+    - [Plzenská]{"entity": "ulica"}
+    - [Pod Furčou]{"entity": "ulica"}
+    - [Pod Gruntom]{"entity": "ulica"}
+    - [Pod horou]{"entity": "ulica"}
+    - [Pod hrabinou]{"entity": "ulica"}
+    - [Pod hrebienkom]{"entity": "ulica"}
+    - [Pod kaštieľom]{"entity": "ulica"}
+    - [Pod Stavencom]{"entity": "ulica"}
+    - [Pod šiancom]{"entity": "ulica"}
+    - [Pod vinicami]{"entity": "ulica"}
+    - [Pod Vitalinou]{"entity": "ulica"}
+    - [Pod vlekom]{"entity": "ulica"}
+    - [Podbeľová]{"entity": "ulica"}
+    - [Podjavorinskej]{"entity": "ulica"}
+    - [Podkamenná]{"entity": "ulica"}
+    - [Podnikateľská]{"entity": "ulica"}
+    - [Pokojná]{"entity": "ulica"}
+    - [Polárna]{"entity": "ulica"}
+    - [Polesná]{"entity": "ulica"}
+    - [Polianska]{"entity": "ulica"}
+    - [Pollova]{"entity": "ulica"}
+    - [Poľná]{"entity": "ulica"}
+    - [Poloninská]{"entity": "ulica"}
+    - [Poľovnícka]{"entity": "ulica"}
+    - [Poľovská]{"entity": "ulica"}
+    - [Poľská]{"entity": "ulica"}
+    - [Poludníková]{"entity": "ulica"}
+    - [Paničanova]{"entity": "ulica"}
+    - [Popradská]{"entity": "ulica"}
+    - [Postupimská]{"entity": "ulica"}
+    - [Poštová]{"entity": "ulica"}
+    - [Potočná]{"entity": "ulica"}
+    - [Považská]{"entity": "ulica"}
+    - [Povrazová]{"entity": "ulica"}
+    - [Povstania českého ľudu]{"entity": "ulica"}
+    - [Požiarnická]{"entity": "ulica"}
+    - [Prasličková]{"entity": "ulica"}
+    - [Prašná]{"entity": "ulica"}
+    - [Pražská]{"entity": "ulica"}
+    - [Prešovská cesta]{"entity": "ulica"}
+    - [Pri bitúnku]{"entity": "ulica"}
+    - [Pri hati]{"entity": "ulica"}
+    - [Pri Hornáde]{"entity": "ulica"}
+    - [Pri Hrušove]{"entity": "ulica"}
+    - [Pri jazdiarni]{"entity": "ulica"}
+    - [Pri Krásnej]{"entity": "ulica"}
+    - [Pri Miklušovej väznici]{"entity": "ulica"}
+    - [Pri Miklušovej vaznici]{"entity": "ulica"}
+    - [Pri nemocnici]{"entity": "ulica"}
+    - [Pri plynárni]{"entity": "ulica"}
+    - [Pri pošte]{"entity": "ulica"}
+    - [Pri prachárni]{"entity": "ulica"}
+    - [Pri salaši]{"entity": "ulica"}
+    - [Pri sídlisku]{"entity": "ulica"}
+    - [Pri Teleku]{"entity": "ulica"}
+    - [Pri vagovni]{"entity": "ulica"}
+    - [Pri železničnej stanici]{"entity": "ulica"}
+    - [Pribinova]{"entity": "ulica"}
+    - [Priemyselná]{"entity": "ulica"}
+    - [Prievidzská]{"entity": "ulica"}
+    - [Príkra]{"entity": "ulica"}
+    - [Prof. Jána Kňazovického]{"entity": "ulica"}
+    - [Protifašistických bojovníkov]{"entity": "ulica"}
+    - [Prúdová]{"entity": "ulica"}
+    - [Prvosienková]{"entity": "ulica"}
+    - [Pšeničná]{"entity": "ulica"}
+    - [Púchovská]{"entity": "ulica"}
+    - [Púpavová]{"entity": "ulica"}
+    - [Puškinova]{"entity": "ulica"}
+    - [Pytliacka]{"entity": "ulica"}
+    - [Račí potok]{"entity": "ulica"}
+    - [Račianska]{"entity": "ulica"}
+    - [Račkov park]{"entity": "ulica"}
+    - [Radlinského]{"entity": "ulica"}
+    - [Raketová]{"entity": "ulica"}
+    - [Rampová]{"entity": "ulica"}
+    - [Ranná]{"entity": "ulica"}
+    - [Rastislavova]{"entity": "ulica"}
+    - [Rázusova]{"entity": "ulica"}
+    - [Ražná]{"entity": "ulica"}
+    - [Rehoľná]{"entity": "ulica"}
+    - [Repíková]{"entity": "ulica"}
+    - [Repná]{"entity": "ulica"}
+    - [Rešov majer]{"entity": "ulica"}
+    - [Revúcka]{"entity": "ulica"}
+    - [Rímska]{"entity": "ulica"}
+    - [Riznerova]{"entity": "ulica"}
+    - [Robotinícka]{"entity": "ulica"}
+    - [Rokycká]{"entity": "ulica"}
+    - [Roľnícka]{"entity": "ulica"}
+    - [Rooseveltova]{"entity": "ulica"}
+    - [Rosná]{"entity": "ulica"}
+    - [Rovníková]{"entity": "ulica"}
+    - [Rozálska]{"entity": "ulica"}
+    - [Rozmarínová]{"entity": "ulica"}
+    - [Rozvojová]{"entity": "ulica"}
+    - [Rožňavská]{"entity": "ulica"}
+    - [Rubínová]{"entity": "ulica"}
+    - [Rulandská]{"entity": "ulica"}
+    - [Rumanova]{"entity": "ulica"}
+    - [Rumunská]{"entity": "ulica"}
+    - [Rusnákova]{"entity": "ulica"}
+    - [Ružínska]{"entity": "ulica"}
+    - [Ružomberská]{"entity": "ulica"}
+    - [Ružová]{"entity": "ulica"}
+    - [Rybárska]{"entity": "ulica"}
+    - [Sabinovská]{"entity": "ulica"}
+    - [Sadovnícka]{"entity": "ulica"}
+    - [Sečovská cesta]{"entity": "ulica"}
+    - [Senný trh]{"entity": "ulica"}
+    - [Severné nábrežie]{"entity": "ulica"}
+    - [Skalná]{"entity": "ulica"}
+    - [Skautská]{"entity": "ulica"}
+    - [Skladná]{"entity": "ulica"}
+    - [Sklepárska]{"entity": "ulica"}
+    - [Sládkovičova]{"entity": "ulica"}
+    - [Slanecká]{"entity": "ulica"}
+    - [Slávičia]{"entity": "ulica"}
+    - [Slavkovská]{"entity": "ulica"}
+    - [Sliačska]{"entity": "ulica"}
+    - [Slivník]{"entity": "ulica"}
+    - [Slnečná]{"entity": "ulica"}
+    - [Slnečnicová ulica]{"entity": "ulica"}
+    - [Slnečnicová]{"entity": "ulica"}
+    - [Slovenská]{"entity": "ulica"}
+    - [Slovenského]{"entity": "ulica"}
+    - [Slovenskej jednoty]{"entity": "ulica"}
+    - [Sluková]{"entity": "ulica"}
+    - [Smaragdová]{"entity": "ulica"}
+    - [Smetanova]{"entity": "ulica"}
+    - [Smreková]{"entity": "ulica"}
+    - [Smutná]{"entity": "ulica"}
+    - [Snežienková]{"entity": "ulica"}
+    - [Sofijská]{"entity": "ulica"}
+    - [Sokolovská]{"entity": "ulica"}
+    - [Solisková]{"entity": "ulica"}
+    - [Spišské námestie]{"entity": "ulica"}
+    - [Sputniková]{"entity": "ulica"}
+    - [Srbská]{"entity": "ulica"}
+    - [Srnčia]{"entity": "ulica"}
+    - [Stálicova]{"entity": "ulica"}
+    - [Staničná]{"entity": "ulica"}
+    - [Staničné námestie]{"entity": "ulica"}
+    - [Stará Baštová]{"entity": "ulica"}
+    - [Stará pracháreň]{"entity": "ulica"}
+    - [Stará prešovská]{"entity": "ulica"}
+    - [Stará spišská cesta]{"entity": "ulica"}
+    - [Staroslovanská]{"entity": "ulica"}
+    - [Starozagorská]{"entity": "ulica"}
+    - [Stierova]{"entity": "ulica"}
+    - [Stodolova]{"entity": "ulica"}
+    - [Stokrásková]{"entity": "ulica"}
+    - [Strakova]{"entity": "ulica"}
+    - [Strážna]{"entity": "ulica"}
+    - [Strieborná]{"entity": "ulica"}
+    - [Strmá]{"entity": "ulica"}
+    - [Strojárenská]{"entity": "ulica"}
+    - [Stromová]{"entity": "ulica"}
+    - [Stropkovská]{"entity": "ulica"}
+    - [Studničná ulica]{"entity": "ulica"}
+    - [Studničná]{"entity": "ulica"}
+    - [Suchodolinská]{"entity": "ulica"}
+    - [Sv. rodiny]{"entity": "ulica"}
+    - [Svätoplukova]{"entity": "ulica"}
+    - [Svatoplukova]{"entity": "ulica"}
+    - [Svetlá]{"entity": "ulica"}
+    - [Svetlá pusta]{"entity": "ulica"}
+    - [Svidnícka]{"entity": "ulica"}
+    - [Szabadosova ulica]{"entity": "ulica"}
+    - [Szabadosova]{"entity": "ulica"}
+    - [Szakkayho]{"entity": "ulica"}
+    - [Šafárikova trieda]{"entity": "ulica"}
+    - [Šafranová]{"entity": "ulica"}
+    - [Šalviová]{"entity": "ulica"}
+    - [Šamborská]{"entity": "ulica"}
+    - [Šarišská]{"entity": "ulica"}
+    - [Šebastovská]{"entity": "ulica"}
+    - [Šemšianska]{"entity": "ulica"}
+    - [Šípková]{"entity": "ulica"}
+    - [Široká]{"entity": "ulica"}
+    - [Školská]{"entity": "ulica"}
+    - [Škovránčia]{"entity": "ulica"}
+    - [Škultétyho]{"entity": "ulica"}
+    - [Šoltésovej]{"entity": "ulica"}
+    - [Športová]{"entity": "ulica"}
+    - [Šrobárova]{"entity": "ulica"}
+    - [Štefánikova]{"entity": "ulica"}
+    - [Štiavnická]{"entity": "ulica"}
+    - [Štítová]{"entity": "ulica"}
+    - [Štrbská]{"entity": "ulica"}
+    - [Štrková]{"entity": "ulica"}
+    - [Študentská]{"entity": "ulica"}
+    - [Štúrova]{"entity": "ulica"}
+    - [Šuhajova]{"entity": "ulica"}
+    - [Táborská]{"entity": "ulica"}
+    - [Ťahanovská]{"entity": "ulica"}
+    - [Ťahanovské riadky]{"entity": "ulica"}
+    - [Tajovského]{"entity": "ulica"}
+    - [Talinská]{"entity": "ulica"}
+    - [Tatarkova]{"entity": "ulica"}
+    - [Tatranská]{"entity": "ulica"}
+    - [Teplárenská]{"entity": "ulica"}
+    - [Teplého]{"entity": "ulica"}
+    - [Terchovská]{"entity": "ulica"}
+    - [Teslova]{"entity": "ulica"}
+    - [Tešedíkova]{"entity": "ulica"}
+    - [Textilná]{"entity": "ulica"}
+    - [Thurzova]{"entity": "ulica"}
+    - [Tibavská]{"entity": "ulica"}
+    - [Tigria]{"entity": "ulica"}
+    - [Tichá]{"entity": "ulica"}
+    - [Timonova]{"entity": "ulica"}
+    - [Timravy]{"entity": "ulica"}
+    - [Titánová]{"entity": "ulica"}
+    - [Titogradská]{"entity": "ulica"}
+    - [Tokajícka]{"entity": "ulica"}
+    - [Tokajská]{"entity": "ulica"}
+    - [Tolstého]{"entity": "ulica"}
+    - [Tomášikova]{"entity": "ulica"}
+    - [Topasová]{"entity": "ulica"}
+    - [Topoľčianska]{"entity": "ulica"}
+    - [Topoľová]{"entity": "ulica"}
+    - [Toryská]{"entity": "ulica"}
+    - [Továrenská]{"entity": "ulica"}
+    - [Tramínová]{"entity": "ulica"}
+    - [Tranovského]{"entity": "ulica"}
+    - [Traťová]{"entity": "ulica"}
+    - [Trebišovská]{"entity": "ulica"}
+    - [Trenčianska]{"entity": "ulica"}
+    - [Tri hôrky]{"entity": "ulica"}
+    - [Trieda arm. gen. Svobodu]{"entity": "ulica"}
+    - [Trieda KVP]{"entity": "ulica"}
+    - [Trieda SNP]{"entity": "ulica"}
+    - [Trnavská]{"entity": "ulica"}
+    - [Trnková]{"entity": "ulica"}
+    - [Tŕňová]{"entity": "ulica"}
+    - [Trolejbusová]{"entity": "ulica"}
+    - [Turgenevova]{"entity": "ulica"}
+    - [Turistická]{"entity": "ulica"}
+    - [Turnianska]{"entity": "ulica"}
+    - [Tvrdošínska]{"entity": "ulica"}
+    - [Tyršovo nábrežie]{"entity": "ulica"}
+    - [Učňovská]{"entity": "ulica"}
+    - [Uherova]{"entity": "ulica"}
+    - [Ukrajinská]{"entity": "ulica"}
+    - [Ulica 1. mája]{"entity": "ulica"}
+    - [1. mája]{"entity": "ulica"}
+    - [Ulica Alexandra Dubčeka]{"entity": "ulica"}
+    - [Alexandra Dubčeka]{"entity": "ulica"}
+    - [Ulica Andreja Kvasa]{"entity": "ulica"}
+    - [Andreja Kvasa]{"entity": "ulica"}
+    - [Ulica Breziny]{"entity": "ulica"}
+    - [Breziny]{"entity": "ulica"}
+    - [Ulica Dolina]{"entity": "ulica"}
+    - [Dolina]{"entity": "ulica"}
+    - [Ulica k Hutke]{"entity": "ulica"}
+    - [k Hutke]{"entity": "ulica"}
+    - [K Hutke]{"entity": "ulica"}
+    - [Ulica k Zoologickej záhrade]{"entity": "ulica"}
+    - [k Zoologickej záhrade]{"entity": "ulica"}
+    - [K Zoologickej záhrade]{"entity": "ulica"}
+    - [Ulica ku Gederu]{"entity": "ulica"}
+    - [ulica ku Gederu]{"entity": "ulica"}
+    - [Ku Gederu]{"entity": "ulica"}
+    - [ku Gederu]{"entity": "ulica"}
+    - [Ulica Malokarpatská]{"entity": "ulica"}
+    - [Malokarpatská]{"entity": "ulica"}
+    - [Ulica na Furmanci]{"entity": "ulica"}
+    - [na Furmanci]{"entity": "ulica"}
+    - [Na Furmanci]{"entity": "ulica"}
+    - [Ulica na Grunte]{"entity": "ulica"}
+    - [na Grunte]{"entity": "ulica"}
+    - [Na Grunte]{"entity": "ulica"}
+    - [Ulica na Košarisku]{"entity": "ulica"}
+    - [ulica na Košarisku]{"entity": "ulica"}
+    - [na Košarisku]{"entity": "ulica"}
+    - [Na Košarisku]{"entity": "ulica"}
+    - [Ulica na Polianku]{"entity": "ulica"}
+    - [ulica na Polianku]{"entity": "ulica"}
+    - [na Polianku]{"entity": "ulica"}
+    - [Na Polianku]{"entity": "ulica"}
+    - [Ulica na prednom Záhumní]{"entity": "ulica"}
+    - [ulica na prednom Záhumní]{"entity": "ulica"}
+    - [Na prednom Záhumní]{"entity": "ulica"}
+    - [na prednom Záhumní]{"entity": "ulica"}
+    - [Ulica na zadnom Záhumní]{"entity": "ulica"}
+    - [ulica na zadnom Záhumní]{"entity": "ulica"}
+    - [Na zadnom Záhumní]{"entity": "ulica"}
+    - [na zadnom Záhumní]{"entity": "ulica"}
+    - [Ulica nad Bangortami]{"entity": "ulica"}
+    - [ulica nad Bangortami]{"entity": "ulica"}
+    - [nad Bangortami]{"entity": "ulica"}
+    - [nad Bangortami]{"entity": "ulica"}
+    - [Ulica obrody]{"entity": "ulica"}
+    - [ulica obrody]{"entity": "ulica"}
+    - [obrody]{"entity": "ulica"}
+    - [Ulica osloboditeľov]{"entity": "ulica"}
+    - [ulica osloboditeľov]{"entity": "ulica"}
+    - [Ulica pod Čapášom]{"entity": "ulica"}
+    - [ulica pod Čapášom]{"entity": "ulica"}
+    - [pod Čapášom]{"entity": "ulica"}
+    - [Pod Čapášom]{"entity": "ulica"}
+    - [Ulica pod Hájmi]{"entity": "ulica"}
+    - [ulica pod Hájmi]{"entity": "ulica"}
+    - [Pod Hájmi]{"entity": "ulica"}
+    - [pod Hájmi]{"entity": "ulica"}
+    - [Ulica pod lesom]{"entity": "ulica"}
+    - [ulica pod lesom]{"entity": "ulica"}
+    - [pod lesom]{"entity": "ulica"}
+    - [Pod lesom]{"entity": "ulica"}
+    - [Ulica pokroku]{"entity": "ulica"}
+    - [pokroku]{"entity": "ulica"}
+    - [Ulica pri plavárni]{"entity": "ulica"}
+    - [ulica pri plavárni]{"entity": "ulica"}
+    - [pri plavárni]{"entity": "ulica"}
+    - [Pri plavárni]{"entity": "ulica"}
+    - [Ulica pri Studničke]{"entity": "ulica"}
+    - [ulica pri Studničke]{"entity": "ulica"}
+    - [pri Studničke]{"entity": "ulica"}
+    - [Pri Studničke]{"entity": "ulica"}
+    - [Ulica Sajkov]{"entity": "ulica"}
+    - [ulica Sajkov]{"entity": "ulica"}
+    - [Sajkov]{"entity": "ulica"}
+    - [Ulica Skalická]{"entity": "ulica"}
+    - [ulica Skalická]{"entity": "ulica"}
+    - [Skalická]{"entity": "ulica"}
+    - [Ulica slobody]{"entity": "ulica"}
+    - [slobody]{"entity": "ulica"}
+    - [Ulica Stará sečovská cesta]{"entity": "ulica"}
+    - [ulica Stará sečovská cesta]{"entity": "ulica"}
+    - [Stará sečovská cesta]{"entity": "ulica"}
+    - [Ulica Strážovská]{"entity": "ulica"}
+    - [ulica Strážovská]{"entity": "ulica"}
+    - [Strážovská]{"entity": "ulica"}
+    - [Ulica Súľovská]{"entity": "ulica"}
+    - [ulica Súľovská]{"entity": "ulica"}
+    - [Súľovská]{"entity": "ulica"}
+    - [Ulica sv. Gorazda]{"entity": "ulica"}
+    - [ulica sv. Gorazda]{"entity": "ulica"}
+    - [Sv. Gorazda]{"entity": "ulica"}
+    - [sv. Gorazda]{"entity": "ulica"}
+    - [Ulica sv. Ladislava]{"entity": "ulica"}
+    - [ulica sv. Ladislava]{"entity": "ulica"}
+    - [Sv. Ladislava]{"entity": "ulica"}
+    - [sv. Ladislava]{"entity": "ulica"}
+    - [Ulica Svätovavrinecká]{"entity": "ulica"}
+    - [ulica Svätovavrinecká]{"entity": "ulica"}
+    - [Svätovavrinecká]{"entity": "ulica"}
+    - [Svatovavrinecká]{"entity": "ulica"}
+    - [Ulica svornosti]{"entity": "ulica"}
+    - [svornosti]{"entity": "ulica"}
+    - [Ulica výstavby]{"entity": "ulica"}
+    - [výstavby]{"entity": "ulica"}
+    - [Ulica Záhrada Bernátovce]{"entity": "ulica"}
+    - [Záhrada Bernátovce]{"entity": "ulica"}
+    - [Ulica Zelená stráň]{"entity": "ulica"}
+    - [Zelená stráň]{"entity": "ulica"}
+    - [Ulica Zelený dvor]{"entity": "ulica"}
+    - [Zelený dvor]{"entity": "ulica"}
+    - [Univerzitná]{"entity": "ulica"}
+    - [Uralská]{"entity": "ulica"}
+    - [Urbánkova]{"entity": "ulica"}
+    - [Urbárska]{"entity": "ulica"}
+    - [Uršulínska]{"entity": "ulica"}
+    - [Úzka]{"entity": "ulica"}
+    - [Užhorodská]{"entity": "ulica"}
+    - [V úvoze]{"entity": "ulica"}
+    - [Vajanského]{"entity": "ulica"}
+    - [Valalická]{"entity": "ulica"}
+    - [Varšavská]{"entity": "ulica"}
+    - [Važecká]{"entity": "ulica"}
+    - [Včelárska paseka]{"entity": "ulica"}
+    - [Vencová]{"entity": "ulica"}
+    - [Veterná]{"entity": "ulica"}
+    - [Viedenská]{"entity": "ulica"}
+    - [Vihorlatská]{"entity": "ulica"}
+    - [Viničná]{"entity": "ulica"}
+    - [Vínna]{"entity": "ulica"}
+    - [Vínová]{"entity": "ulica"}
+    - [Višňová]{"entity": "ulica"}
+    - [Vnútorný Červený breh]{"entity": "ulica"}
+    - [Vo výmoli]{"entity": "ulica"}
+    - [Vodárenská]{"entity": "ulica"}
+    - [Vodná]{"entity": "ulica"}
+    - [Vojenská]{"entity": "ulica"}
+    - [Vojvodská]{"entity": "ulica"}
+    - [Vonkajší Červený breh]{"entity": "ulica"}
+    - [Vozárova]{"entity": "ulica"}
+    - [Vrabčia]{"entity": "ulica"}
+    - [Vranovská]{"entity": "ulica"}
+    - [Vrátna]{"entity": "ulica"}
+    - [Vŕbová]{"entity": "ulica"}
+    - [Vrchná]{"entity": "ulica"}
+    - [Vyhoňská]{"entity": "ulica"}
+    - [Východná]{"entity": "ulica"}
+    - [Vysokoškolská]{"entity": "ulica"}
+    - [Vyšná]{"entity": "ulica"}
+    - [Vyšná úvrať]{"entity": "ulica"}
+    - [Vyšný dvor]{"entity": "ulica"}
+    - [Watsonova]{"entity": "ulica"}
+    - [Werferova]{"entity": "ulica"}
+    - [Wuppertálska]{"entity": "ulica"}
+    - [Wurmova]{"entity": "ulica"}
+    - [Za amfiteátrom]{"entity": "ulica"}
+    - [Za dolným mlynom]{"entity": "ulica"}
+    - [Za mostom]{"entity": "ulica"}
+    - [Za priekopou]{"entity": "ulica"}
+    - [Za školou]{"entity": "ulica"}
+    - [Za štadiónom]{"entity": "ulica"}
+    - [Záborského]{"entity": "ulica"}
+    - [Zádielska]{"entity": "ulica"}
+    - [Záhradná]{"entity": "ulica"}
+    - [Zajačia]{"entity": "ulica"}
+    - [Zámočnícka]{"entity": "ulica"}
+    - [Zborovjanova]{"entity": "ulica"}
+    - [Zborovská]{"entity": "ulica"}
+    - [Zbrojničná]{"entity": "ulica"}
+    - [Zelená]{"entity": "ulica"}
+    - [Zeleninárska]{"entity": "ulica"}
+    - [Zemianska]{"entity": "ulica"}
+    - [Zemplínska]{"entity": "ulica"}
+    - [Zichyho]{"entity": "ulica"}
+    - [Zimná]{"entity": "ulica"}
+    - [Zinková]{"entity": "ulica"}
+    - [Zlatá]{"entity": "ulica"}
+    - [Zoborská]{"entity": "ulica"}
+    - [Zombova]{"entity": "ulica"}
+    - [Zupkova]{"entity": "ulica"}
+    - [Zuzkin park]{"entity": "ulica"}
+    - [Zvolenská]{"entity": "ulica"}
+    - [Zvonárska]{"entity": "ulica"}
+    - [Zvončeková]{"entity": "ulica"}
+    - [Žarnovická]{"entity": "ulica"}
+    - [Žatevná]{"entity": "ulica"}
+    - [Ždiarska]{"entity": "ulica"}
+    - [Železiarenská]{"entity": "ulica"}
+    - [Železničná]{"entity": "ulica"}
+    - [Želiarska]{"entity": "ulica"}    
+    - [Žiacka]{"entity": "ulica"} 
+    - [Žilinská]{"entity": "ulica"} 
+    - [Žitná]{"entity": "ulica"} 
+    - [Žižkova]{"entity": "ulica"} 
+    - [Žľaby]{"entity": "ulica"}
+    - [Žriedlová ulica]{"entity": "ulica"} 
+    - [Žriedlová]{"entity": "ulica"}     
+- regex: ulica
+  examples: |
+    - ^[A-ZČĎŠŤŽ][a-zA-ZČĎŠŤŽá-ž]*(?:[\s\-]\d+)?$    
+
+- intent: inform_obec
+  examples: |
+    - moja obec je [Kosice]{"entity": "obec"}
+    - [Košice]{"entity": "obec"}
+    - obec [Košice - Barca]{"entity": "obec"}
+    - [Barca]{"entity": "obec", "value": "Košice - Barca"}
+    - obec [Košice - Dargovských hrdinov]{"entity": "obec"}
+    - [Dargovských hrdinov]{"entity": "obec", "value": "Košice - Dargovských hrdinov"}
+    - [Košice - Džungľa]{"entity": "obec"}
+    - [Kosice - Dzungla]{"entity": "obec", "value": "Košice - Džungľa"}
+    - [Dzungla]{"entity": "obec", "value": "Košice - Džungľa"}
+    - [Džungľa]{"entity": "obec", "value": "Košice - Džungľa"}
+    - [Košice - Juh]{"entity": "obec"}
+    - [Kosice - Juh]{"entity": "obec", "value": "Košice - Juh"}
+    - [Juh]{"entity": "obec", "value": "Košice - Juh"}
+    - [Košice - Kavečany]{"entity": "obec", "value": "Košice - Kavečany"}
+    - [Kosice - Kavecany]{"entity": "obec", "value": "Košice - Kavečany"}
+    - [Kavecany]{"entity": "obec", "value": "Košice - Kavečany"}
+    - [Kavečany]{"entity": "obec", "value": "Košice - Kavečany"}
+    - [Košice - Košická Nová Ves]{"entity": "obec", "value": "Košice - Košická Nová Ves"}
+    - [Kosice - Kosicka Nova Ves]{"entity": "obec", "value": "Košice - Košická Nová Ves"}
+    - [kosice - kosicka nova ves]{"entity": "obec", "value": "Košice - Košická Nová Ves"}
+    - [Košická Nová Ves]{"entity": "obec", "value": "Košice - Košická Nová Ves"}
+    - [Kosicka Nova Ves]{"entity": "obec", "value": "Košice - Košická Nová Ves"}
+    - [košická ková ves]{"entity": "obec", "value": "Košice - Košická Nová Ves"}
+    - [košická Nová Ves]{"entity": "obec", "value": "Košice - Košická Nová Ves"}
+    - [kosicka nova ves]{"entity": "obec", "value": "Košice - Košická Nová Ves"}
+    - [Košice - Krásna]{"entity": "obec", "value": "Košice - Krásna"}
+    - [Kosice - Krasna]{"entity": "obec", "value": "Košice - Krásna"}
+    - [kosice - krasna]{"entity": "obec", "value": "Košice - Krásna"}
+    - [Krásna]{"entity": "obec", "value": "Košice - Krásna"}
+    - [krásna]{"entity": "obec", "value": "Košice - Krásna"}
+    - [Krasna]{"entity": "obec", "value": "Košice - Krásna"}
+    - [krasna]{"entity": "obec", "value": "Košice - Krásna"}
+    - [Košice - Lorinčík]{"entity": "obec", "value": "Košice - Lorinčík"}
+    - [Kosice - Lorincik]{"entity": "obec", "value": "Košice - Lorinčík"}
+    - [kosice - lorincik]{"entity": "obec", "value": "Košice - Lorinčík"}
+    - [Lorinčík]{"entity": "obec", "value": "Košice - Lorinčík"}
+    - [Lorincik]{"entity": "obec", "value": "Košice - Lorinčík"}
+    - [lorinčík]{"entity": "obec", "value": "Košice - Lorinčík"}
+    - [lorincik]{"entity": "obec", "value": "Košice - Lorinčík"}
+    - [Košice - Luník IX]{"entity": "obec", "value": "Košice - Luník IX"}
+    - [Kosice - Lunik IX]{"entity": "obec", "value": "Košice - Luník IX"}
+    - [košice - luník IX]{"entity": "obec", "value": "Košice - Luník IX"}
+    - [kosice - lunik IX]{"entity": "obec", "value": "Košice - Luník IX"}
+    - [Luník IX]{"entity": "obec", "value": "Košice - Luník IX"}
+    - [Lunik IX]{"entity": "obec", "value": "Košice - Luník IX"}
+    - [luník IX]{"entity": "obec", "value": "Košice - Luník IX"}
+    - [lunik IX]{"entity": "obec", "value": "Košice - Luník IX"}
+    - [Košice - Myslava]{"entity": "obec", "value": "Košice - Myslava"}
+    - [Kosice - Myslava]{"entity": "obec", "value": "Košice - Myslava"}
+    - [košice - myslava]{"entity": "obec", "value": "Košice - Myslava"}
+    - [kosice - myslava]{"entity": "obec", "value": "Košice - Myslava"}
+    - [Myslava]{"entity": "obec", "value": "Košice - Myslava"}
+    - [myslava]{"entity": "obec", "value": "Košice - Myslava"}
+    - [Košice - Nad jazerom]{"entity": "obec", "value": "Košice - Nad jazerom"}
+    - [Kosice - Nad jazerom]{"entity": "obec", "value": "Košice - Nad jazerom"}
+    - [košice - nad jazerom]{"entity": "obec", "value": "Košice - Nad jazerom"}
+    - [kosice - nad jazerom]{"entity": "obec", "value": "Košice - Nad jazerom"}
+    - [Nad jazerom]{"entity": "obec", "value": "Košice - Nad jazerom"}
+    - [nad jazerom]{"entity": "obec", "value": "Košice - Nad jazerom"}
+    - [Košice - Pereš]{"entity": "obec", "value": "Košice - Pereš"}
+    - [Kosice - Peres]{"entity": "obec", "value": "Košice - Pereš"}
+    - [košice - pereš]{"entity": "obec", "value": "Košice - Pereš"}
+    - [kosice - peres]{"entity": "obec", "value": "Košice - Pereš"}
+    - [Pereš]{"entity": "obec", "value": "Košice - Pereš"}
+    - [Peres]{"entity": "obec", "value": "Košice - Pereš"}
+    - [pereš]{"entity": "obec", "value": "Košice - Pereš"}
+    - [peres]{"entity": "obec", "value": "Košice - Pereš"}
+    - [Košice - Poľov]{"entity": "obec", "value": "Košice - Poľov"}
+    - [Kosice - Polov]{"entity": "obec", "value": "Košice - Poľov"}
+    - [košice - poľov]{"entity": "obec", "value": "Košice - Poľov"}
+    - [kosice - polov]{"entity": "obec", "value": "Košice - Poľov"}
+    - [Poľov]{"entity": "obec", "value": "Košice - Poľov"}
+    - [Polov]{"entity": "obec", "value": "Košice - Poľov"}
+    - [poľov]{"entity": "obec", "value": "Košice - Poľov"}
+    - [polov]{"entity": "obec", "value": "Košice - Poľov"}
+    - [Košice - Šaca]{"entity": "obec", "value": "Košice - Šaca"}
+    - [Kosice - Saca]{"entity": "obec", "value": "Košice - Šaca"}
+    - [košice - šaca]{"entity": "obec", "value": "Košice - Šaca"}
+    - [kosice - saca]{"entity": "obec", "value": "Košice - Šaca"}
+    - [Šaca]{"entity": "obec", "value": "Košice - Šaca"}
+    - [Saca]{"entity": "obec", "value": "Košice - Šaca"}
+    - [šaca]{"entity": "obec", "value": "Košice - Šaca"}
+    - [saca]{"entity": "obec", "value": "Košice - Šaca"}
+    - [Košice - Šebastovce]{"entity": "obec", "value": "Košice - Šebastovce"}
+    - [Kosice - Sebastovce]{"entity": "obec", "value": "Košice - Šebastovce"}
+    - [košice - šebastovce]{"entity": "obec", "value": "Košice - Šebastovce"}
+    - [kosice - sebastovce]{"entity": "obec", "value": "Košice - Šebastovce"}
+    - [Šebastovce]{"entity": "obec", "value": "Košice - Šebastovce"}
+    - [Sebastovce]{"entity": "obec", "value": "Košice - Šebastovce"}
+    - [sebastovce]{"entity": "obec", "value": "Košice - Šebastovce"}
+    - [šebastovce]{"entity": "obec", "value": "Košice - Šebastovce"}
+    - [Košice - Sever]{"entity": "obec", "value": "Košice - Sever"}
+    - [Kosice - Sever]{"entity": "obec", "value": "Košice - Sever"}
+    - [košice - sever]{"entity": "obec", "value": "Košice - Sever"}
+    - [kosice - sever]{"entity": "obec", "value": "Košice - Sever"}
+    - [Sever]{"entity": "obec", "value": "Košice - Sever"}
+    - [sever]{"entity": "obec", "value": "Košice - Sever"}
+    - [Košice - Sídlisko KVP]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [Kosice - Sidlisko KVP]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [košice - sídlisko KVP]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [kosice - sidlisko KVP]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [Košice - Sídlisko kvp]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [Kosice - Sidlisko kvp]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [košice - sídlisko kvp]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [kosice - sidlisko kvp]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [Sídlisko KVP]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [Sidlisko KVP]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [sídlisko KVP]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [sidlisko KVP]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [Sídlisko kvp]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [Sidlisko kvp]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [sídlisko kvp]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [sidlisko kvp]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [KVP]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [kvp]{"entity": "obec", "value": "Košice - Sídlisko KVP"}
+    - [Košice - Sídlisko Ťahanovce]{"entity": "obec", "value": "Košice - Sídlisko Ťahanovce"}
+    - [Kosice - Sidlisko Tahanovce]{"entity": "obec", "value": "Košice - Sídlisko Ťahanovce"}
+    - [košice - sídlisko ťahanovce]{"entity": "obec", "value": "Košice - Sídlisko Ťahanovce"}
+    - [kosice - sidlisko tahanovce]{"entity": "obec", "value": "Košice - Sídlisko Ťahanovce"}
+    - [Sídlisko Ťahanovce]{"entity": "obec", "value": "Košice - Sídlisko Ťahanovce"}
+    - [Sidlisko Tahanovce]{"entity": "obec", "value": "Košice - Sídlisko Ťahanovce"}
+    - [sídlisko ťahanovce]{"entity": "obec", "value": "Košice - Sídlisko Ťahanovce"}
+    - [sidlisko tahanovce]{"entity": "obec", "value": "Košice - Sídlisko Ťahanovce"}
+    - [Košice - Staré Mesto]{"entity": "obec", "value": "Košice - Staré Mesto"}
+    - [Kosice - Stare Mesto]{"entity": "obec", "value": "Košice - Staré Mesto"}
+    - [košice - staré mesto]{"entity": "obec", "value": "Košice - Staré Mesto"}
+    - [kosice - stare mesto]{"entity": "obec", "value": "Košice - Staré Mesto"}
+    - [Staré Mesto]{"entity": "obec", "value": "Košice - Staré Mesto"}
+    - [Stare Mesto]{"entity": "obec", "value": "Košice - Staré Mesto"}
+    - [staré mesto]{"entity": "obec", "value": "Košice - Staré Mesto"}
+    - [stare mesto]{"entity": "obec", "value": "Košice - Staré Mesto"}
+    - [Košice - Ťahanovce]{"entity": "obec", "value": "Košice - Ťahanovce"}
+    - [košice - ťahanovce]{"entity": "obec", "value": "Košice - Ťahanovce"}
+    - [Kosice - Tahanovce]{"entity": "obec", "value": "Košice - Ťahanovce"}
+    - [kosice - tahanovce]{"entity": "obec", "value": "Košice - Ťahanovce"}
+    - [Ťahanovce]{"entity": "obec", "value": "Košice - Ťahanovce"}
+    - [Tahanovce]{"entity": "obec", "value": "Košice - Ťahanovce"}
+    - [ťahanovce]{"entity": "obec", "value": "Košice - Ťahanovce"}
+    - [tahanovce]{"entity": "obec", "value": "Košice - Ťahanovce"}
+    - [Košice - Vyšné Opátske]{"entity": "obec", "value": "Košice - Vyšné Opátske"}
+    - [Kosice - Vysne Opatske]{"entity": "obec", "value": "Košice - Vyšné Opátske"}
+    - [košice - vyšné opátske]{"entity": "obec", "value": "Košice - Vyšné Opátske"}
+    - [kosice - vysne opatske]{"entity": "obec", "value": "Košice - Vyšné Opátske"}
+    - [Vyšné Opátske]{"entity": "obec", "value": "Košice - Vyšné Opátske"}
+    - [Vysne Opatske]{"entity": "obec", "value": "Košice - Vyšné Opátske"}
+    - [vyšné opátske]{"entity": "obec", "value": "Košice - Vyšné Opátske"}
+    - [vysne opatske]{"entity": "obec", "value": "Košice - Vyšné Opátske"}
+    - [Košice - Západ]{"entity": "obec", "value": "Košice - Západ"}
+    - [Kosice - Zapad]{"entity": "obec", "value": "Košice - Západ"}
+    - [košice - západ]{"entity": "obec", "value": "Košice - Západ"}
+    - [kosice - zapad]{"entity": "obec", "value": "Košice - Západ"}
+    - [Západ]{"entity": "obec", "value": "Košice - Západ"}
+    - [Zapad]{"entity": "obec", "value": "Košice - Západ"}
+    - [západ]{"entity": "obec", "value": "Košice - Západ"}
+    - [zapad]{"entity": "obec", "value": "Košice - Západ"}    
+- regex: obec
+  examples: |
+    - ^[^\d]+(\s[^\d]+)*$    
+   
+- intent: inform_stat
+  examples: |
+    - moj stat je [Slovensko]{"entity": "stat"}
+    - môj štát je [Slovensko]{"entity": "stat"}
+    - stat je [Slovensko]{"entity": "stat"}
+    - štát [Slovensko]{"entity": "stat"}
+    - štát [Slovenská republika]{"entity": "stat"}
+    - stat [Slovenská republika]{"entity": "stat"}
+    - [Slovenska republika]{"entity": "stat"}
+    - [Slovensko]{"entity": "stat"}
+    - [Maďarsko]{"entity": "stat"}
+    - [Albánsko]{"entity": "stat"}
+    - [Albansko]{"entity": "stat"}
+    - [Andora]{"entity": "stat"}
+    - [Andorra]{"entity": "stat"}
+    - [Belgicko]{"entity": "stat"}
+    - [Bielorusko]{"entity": "stat"}
+    - [Bosna a Hercegovina]{"entity": "stat"}
+    - [Bosna]{"entity": "stat", "value": "Bosna a Hercegovina"}
+    - [Bulharsko]{"entity": "stat"}
+    - [Česko]{"entity": "stat"}
+    - [Cesko]{"entity": "stat"}
+    - [Ceska republika]{"entity": "stat"}
+    - [Česká republika]{"entity": "stat"}
+    - [Čierna Hora]{"entity": "stat"}
+    - [Cierna Mora]{"entity": "stat"}
+    - [Dánsko]{"entity": "stat"}
+    - [Dansko]{"entity": "stat"}
+    - [Estónsko]{"entity": "stat"}
+    - [Estonsko]{"entity": "stat"}
+    - [Fínsko]{"entity": "stat"}
+    - [Finsko]{"entity": "stat"}
+    - [Francúzsko]{"entity": "stat"}
+    - [Francuzsko]{"entity": "stat"}
+    - [Grécko]{"entity": "stat"}
+    - [Grecko]{"entity": "stat"}
+    - [Holandsko]{"entity": "stat"}
+    - [Chorvátsko]{"entity": "stat"}
+    - [Chorvatsko]{"entity": "stat"}
+    - [Cyprus]{"entity": "stat"}
+    - [Írsko]{"entity": "stat"}
+    - [Irsko]{"entity": "stat"}
+    - [Lichtenštajnsko]{"entity": "stat"}
+    - [Lichtenstajnsko]{"entity": "stat"}
+    - [Litva]{"entity": "stat"}
+    - [Lotyšsko]{"entity": "stat"}
+    - [Lotyssko]{"entity": "stat"}
+    - [Luxembursko]{"entity": "stat"}
+    - [Macedónsko]{"entity": "stat"}
+    - [Macedonsko]{"entity": "stat"}
+    - [Malta]{"entity": "stat"}
+    - [Moldavsko]{"entity": "stat"}
+    - [Monako]{"entity": "stat"}
+    - [Nemecko]{"entity": "stat"}
+    - [Nórsko]{"entity": "stat"}
+    - [Norsko]{"entity": "stat"}
+    - [Poľsko]{"entity": "stat"}
+    - [Polsko]{"entity": "stat"}
+    - [Portugalsko]{"entity": "stat"}
+    - [Rakúsko]{"entity": "stat"}
+    - [Rakusko]{"entity": "stat"}
+    - [Rumunsko]{"entity": "stat"}
+    - [Rusko]{"entity": "stat"}
+    - [San Maríno]{"entity": "stat"}
+    - [San Marino]{"entity": "stat"}
+    - [Slovinsko]{"entity": "stat"}
+    - [Škótsko]{"entity": "stat"}
+    - [Skotsko]{"entity": "stat"}
+    - [Španielsko]{"entity": "stat"}
+    - [Spanielsko]{"entity": "stat"}
+    - [Švajčiarsko]{"entity": "stat"}
+    - [Svajciarsko]{"entity": "stat"}
+    - [Švédsko]{"entity": "stat"}
+    - [Svedsko]{"entity": "stat"}
+    - [Ukrajina]{"entity": "stat"}
+    - [Veľká Británia]{"entity": "stat"}
+    - [Velka Britania]{"entity": "stat"}
+    - [Vatikán]{"entity": "stat"}
+    - [Vatikan]{"entity": "stat"}    
+- regex: stat
+  examples: |
+    - ^[A-Z][a-z]* [A-Z][a-z]*$
+    - ^[A-Z][a-z]*$ 
+        
+- intent: inform_obchodne_meno
+  examples: |
+    - [obchodne meno]{"entity": "obchodne_meno", "value": "- - -"}
+    - moje obchodne meno je [Slovenska firma s.r.o.]{"entity": "obchodne_meno"}
+    - obchodne meno [Kaviaren U Jablka]{"entity": "obchodne_meno"}
+    - mam obchodné meno [ABC Corporation]{"entity": "obchodne_meno"}
+    - [U Jumina]{"entity": "obchodne_meno"}
+    - [Cassovar business center II a.s.]{"entity": "obchodne_meno"}
+    - [Cassovar business center II]{"entity": "obchodne_meno"}
+    - [MULTIPHARM]{"entity": "obchodne_meno"}
+    - [MULTIPHARM s.r.o.]{"entity": "obchodne_meno"}
+    - [AGENTÚRA GES spol. s r.o.]{"entity": "obchodne_meno"}
+    - [AGENTÚRA GES spol.]{"entity": "obchodne_meno"}
+    - [BOBOR - STAVEBNÁ, VÝROBNÁ, INŽINIERSKA A OBCHODNÁ ČINNOSŤ, s.r.o.]{"entity": "obchodne_meno"}
+    - [BOBOR - STAVEBNÁ, VÝROBNÁ, INŽINIERSKA A OBCHODNÁ ČINNOSŤ]{"entity": "obchodne_meno"}
+    - [BOBOR]{"entity": "obchodne_meno"}
+    - [INTERMEDIA COSMETICS, s.r.o.]{"entity": "obchodne_meno"}
+    - [INTERMEDIA COSMETICS]{"entity": "obchodne_meno"}
+    - [MUDRING, spoločnosť s ručením obmedzeným" v skratke: "MUDRING, spol. s r.o.]{"entity": "obchodne_meno"}
+    - [MUDRING, spoločnosť s ručením obmedzeným" v skratke: "MUDRING, spol.]{"entity": "obchodne_meno"}
+    - [MUDRING, spol. s r.o.]{"entity": "obchodne_meno"}
+    - [MUDRING, spol.]{"entity": "obchodne_meno"}
+    - [MUDRING]{"entity": "obchodne_meno"}
+    - [.. TOPRO s. r. o.]{"entity": "obchodne_meno"}
+    - [TOPRO s. r. o.]{"entity": "obchodne_meno"}
+    - [TOPRO]{"entity": "obchodne_meno"}
+    - [1. ZNAD Košice, a.s.]{"entity": "obchodne_meno"}
+    - [1. ZNAD Košice]{"entity": "obchodne_meno"}
+    - [1.KD reality s.r.o.]{"entity": "obchodne_meno"}
+    - [1.KD reality]{"entity": "obchodne_meno"}
+    - [10CLI s.r.o.]{"entity": "obchodne_meno"}
+    - [10CLI]{"entity": "obchodne_meno"}
+    - [119 s.r.o.]{"entity": "obchodne_meno"}
+    - [119]{"entity": "obchodne_meno"}
+    - [121view Europe s.r.o.]{"entity": "obchodne_meno"}
+    - [121view Europe]{"entity": "obchodne_meno"}
+    - [1907 Bratislava s.r.o.]{"entity": "obchodne_meno"}
+    - [1907 Bratislava]{"entity": "obchodne_meno"}
+    - [1907 s.r.o.]{"entity": "obchodne_meno"}
+    - [1907]{"entity": "obchodne_meno"}
+    - [2 highs, s.r.o.]{"entity": "obchodne_meno"}
+    - [2 highs]{"entity": "obchodne_meno"}
+    - [24 HOME s.r.o.]{"entity": "obchodne_meno"}
+    - [24 HOME]{"entity": "obchodne_meno"}
+    - [2L Development s.r.o.]{"entity": "obchodne_meno"}
+    - [2L Development]{"entity": "obchodne_meno"}
+    - [2M Interier s.r.o.]{"entity": "obchodne_meno"}
+    - [2M Interier]{"entity": "obchodne_meno"}
+    - [2MF, s.r.o.]{"entity": "obchodne_meno"}
+    - [2MF]{"entity": "obchodne_meno"}
+    - [2NET, s.r.o.]{"entity": "obchodne_meno"}
+    - [2NET]{"entity": "obchodne_meno"}
+    - [2P Partners s. r. o.]{"entity": "obchodne_meno"}
+    - [2P Partners]{"entity": "obchodne_meno"}
+    - [2P, s. r. o. Košice]{"entity": "obchodne_meno"}
+    - [2P, s. r. o.]{"entity": "obchodne_meno"}
+    - [2P]{"entity": "obchodne_meno"}
+    - [2PACK s.r.o.]{"entity": "obchodne_meno"}
+    - [2PACK]{"entity": "obchodne_meno"}
+    - [2Wheels s.r.o.]{"entity": "obchodne_meno"}
+    - [2Wheels]{"entity": "obchodne_meno"}
+    - [A STEEL s.r.o.]{"entity": "obchodne_meno"}
+    - [A STEEL]{"entity": "obchodne_meno"}
+    - [ADAMAS s.r.o.]{"entity": "obchodne_meno"}
+    - [ADAMAS]{"entity": "obchodne_meno"}
+    - [ADAMS s.r.o.]{"entity": "obchodne_meno"}
+    - [ADAMS]{"entity": "obchodne_meno"}
+    - [ADING s.r.o.]{"entity": "obchodne_meno"}
+    - [ADING]{"entity": "obchodne_meno"}
+    - [Advise s.r.o.]{"entity": "obchodne_meno"}
+    - [Advise]{"entity": "obchodne_meno"}
+    - [Advokátska kancelária ROMŽA, s.r.o.]{"entity": "obchodne_meno"}
+    - [Advokátska kancelária ROMŽA]{"entity": "obchodne_meno"}
+    - [AGRODRUŽSTVO Košice]{"entity": "obchodne_meno"}
+    - [Agroos s.r.o.]{"entity": "obchodne_meno"}
+    - [AGROCHEMINA s.r.o.]{"entity": "obchodne_meno"}
+    - [AGROCHEMINA]{"entity": "obchodne_meno"}
+    - [aggemi s.r.o.]{"entity": "obchodne_meno"}
+    - [aggemi]{"entity": "obchodne_meno"}      
+   #35 firiem 
+- regex: obchodne_meno
+  examples: |
+    - ^[a-zA-Z0-9\s.'-áéíóúýčďľňšťžÁÉÍÓÚÝČĎĽŇŠŤŽ&]+$    
+
+
+- intent: inform_pravna_forma
+  examples: |
+    - [pravna forma]{"entity": "pravna_forma", "value": "- - -"}
+    - [Akciová spoločnosť]{"entity": "pravna_forma"}
+    - [Akciova spolocnost]{"entity": "pravna_forma", "value": "Akciová spoločnosť"}
+    - [akciova spolocnost]{"entity": "pravna_forma", "value": "Akciová spoločnosť"}
+    - [akciová spoločnosť]{"entity": "pravna_forma", "value": "Akciová spoločnosť"}
+    - [a.s.]{"entity": "pravna_forma", "value": "Akciová spoločnosť"}
+    - [a.s]{"entity": "pravna_forma", "value": "Akciová spoločnosť"}
+    - [as]{"entity": "pravna_forma", "value": "Akciová spoločnosť"}
+    - [Družstvo]{"entity": "pravna_forma"}
+    - právna forma je [Družstvo]{"entity": "pravna_forma"}
+    - pravna forma [Družstvo]{"entity": "pravna_forma"}
+    - [Druzstvo]{"entity": "pravna_forma", "value": "Družstvo"}
+    - [druzstvo]{"entity": "pravna_forma", "value": "Družstvo"}
+    - [Komanditná spoločnosť]{"entity": "pravna_forma"}
+    - [Komanditna spolocnost]{"entity": "pravna_forma", "value": "Komanditná spoločnosť"}
+    - [komanditna spolocnost]{"entity": "pravna_forma", "value": "Komanditná spoločnosť"}
+    - [komanditná spoločnosť]{"entity": "pravna_forma", "value": "Komanditná spoločnosť"}
+    - [k.s.]{"entity": "pravna_forma", "value": "Komanditná spoločnosť"}
+    - [k.s]{"entity": "pravna_forma", "value": "Komanditná spoločnosť"}
+    - [ks]{"entity": "pravna_forma", "value": "Komanditná spoločnosť"}
+    - [Nadácia]{"entity": "pravna_forma"}
+    - právna forma je [Nadácia]{"entity": "pravna_forma"}
+    - pravna forma [Nadácia]{"entity": "pravna_forma"}
+    - [Nadacia]{"entity": "pravna_forma", "value": "Nadácia"}
+    - [nadacia]{"entity": "pravna_forma", "value": "Nadácia"}
+    - [Nezisková organizácia]{"entity": "pravna_forma"}
+    - [Neziskova organizacia]{"entity": "pravna_forma", "value": "Nezisková organizácia"}
+    - [neziskova organizacia]{"entity": "pravna_forma", "value": "Nezisková organizácia"}
+    - [nezisková organizácia]{"entity": "pravna_forma", "value": "Nezisková organizácia"}
+    - [n.o.]{"entity": "pravna_forma", "value": "Nezisková organizácia"}
+    - [n.o]{"entity": "pravna_forma", "value": "Nezisková organizácia"}
+    - [no]{"entity": "pravna_forma", "value": "Nezisková organizácia"}
+    - [Obec]{"entity": "pravna_forma", "value": "Obec (obecný úrad), mesto (mestský úrad)"}
+    - [obec]{"entity": "pravna_forma", "value": "Obec (obecný úrad), mesto (mestský úrad)"}
+    - [Obecný úrad]{"entity": "pravna_forma", "value": "Obec (obecný úrad), mesto (mestský úrad)"}
+    - [Obecny urad]{"entity": "pravna_forma", "value": "Obec (obecný úrad), mesto (mestský úrad)"}
+    - [obecny urad]{"entity": "pravna_forma", "value": "Obec (obecný úrad), mesto (mestský úrad)"}
+    - [Mesto]{"entity": "pravna_forma", "value": "Obec (obecný úrad), mesto (mestský úrad)"}
+    - [mesto]{"entity": "pravna_forma", "value": "Obec (obecný úrad), mesto (mestský úrad)"}
+    - [Mestský úrad]{"entity": "pravna_forma", "value": "Obec (obecný úrad), mesto (mestský úrad)"}
+    - [Mestsky urad]{"entity": "pravna_forma", "value": "Obec (obecný úrad), mesto (mestský úrad)"}
+    - [mestsky urad]{"entity": "pravna_forma", "value": "Obec (obecný úrad), mesto (mestský úrad)"}
+    - [Spoločnosť s ručením obmedzeným]{"entity": "pravna_forma"}
+    - [Spolocnost s rucenim obmedzenym]{"entity": "pravna_forma", "value": "Spoločnosť s ručením obmedzeným"}
+    - [spoločnosť s ručením obmedzeným]{"entity": "pravna_forma", "value": "Spoločnosť s ručením obmedzeným"}
+    - [spolocnost s rucenim obmedzenym]{"entity": "pravna_forma", "value": "Spoločnosť s ručením obmedzeným"}
+    - [s.r.o.]{"entity": "pravna_forma", "value": "Spoločnosť s ručením obmedzeným"}
+    - [s.r.o]{"entity": "pravna_forma", "value": "Spoločnosť s ručením obmedzeným"}
+    - [s.ro]{"entity": "pravna_forma", "value": "Spoločnosť s ručením obmedzeným"}
+    - [sro]{"entity": "pravna_forma", "value": "Spoločnosť s ručením obmedzeným"}
+    - [Verejná obchodná spoločnosť]{"entity": "pravna_forma"}
+    - [Verejna obchodna spolocnost]{"entity": "pravna_forma", "value": "Verejná obchodná spoločnosť"}
+    - [verejná obchodná spoločnosť]{"entity": "pravna_forma", "value": "Verejná obchodná spoločnosť"}
+    - [verejna obchodna spolocnost]{"entity": "pravna_forma", "value": "Verejná obchodná spoločnosť"}
+    - [v.o.s.]{"entity": "pravna_forma", "value": "Spoločnosť s ručením obmedzeným"}
+    - [v.o.s]{"entity": "pravna_forma", "value": "Spoločnosť s ručením obmedzeným"}
+    - [v.os]{"entity": "pravna_forma", "value": "Spoločnosť s ručením obmedzeným"}
+    - [vos]{"entity": "pravna_forma", "value": "Spoločnosť s ručením obmedzeným"}
+    - moja pravna forma je [s.r.o.]{"entity": "pravna_forma"}
+    - právna forma [a.s.]{"entity": "pravna_forma"}
+    - mám právnu formu [spol. s r.o.]{"entity": "pravna_forma"}
+    - [obchodné družstvo]{"entity": "pravna_forma"}    
+- regex: pravna_forma
+  examples: |
+    - ^[a-zA-Z0-9\s.'-áéíóúýčďľňšťžÁÉÍÓÚÝČĎĽŇŠŤŽ&]+$    
+
+
+- intent: inform_ICO
+  examples: |
+    - [ICO]{"entity": "ICO", "value": "- - -"}
+    - moje IČO je [12345678]{"entity": "ICO"}
+    - IČO [98765432]{"entity": "ICO"}
+    - mám IČO [45678912]{"entity": "ICO"}
+    - [15975346]{"entity": "ICO"}
+    - [12345678]{"entity": "ICO"}
+    - [98765432]{"entity": "ICO"}
+    - [87654321]{"entity": "ICO"}
+    - [13579246]{"entity": "ICO"}
+    - [24681357]{"entity": "ICO"}
+    - [65432109]{"entity": "ICO"}
+    - [98765410]{"entity": "ICO"}
+    - [11223344]{"entity": "ICO"}
+    - [55667788]{"entity": "ICO"}
+    - [99887766]{"entity": "ICO"}
+    - [11223355]{"entity": "ICO"}
+    - [77889900]{"entity": "ICO"}
+    - [33445566]{"entity": "ICO"}
+    - [88990011]{"entity": "ICO"}
+    - [55667788]{"entity": "ICO"}
+    - [44556677]{"entity": "ICO"}
+    - [22334455]{"entity": "ICO"}
+    - [11223344]{"entity": "ICO"}
+    - [12348765]{"entity": "ICO"}
+    - [87654321]{"entity": "ICO"}    
+- regex: ICO
+  examples: |
+    - ^\d{8}$    
+
+
+- intent: inform_telefonne_cislo
+  examples: |
+    - moje telefonne cislo je [+421949409111]{"entity": "telefonne_cislo"}
+    - telefonne cislo [+421944560588]{"entity": "telefonne_cislo"}
+    - mam telefonne cislo [+421944567890]{"entity": "telefonne_cislo"}
+    - moje telefónne číslo je [+421949449111]{"entity": "telefonne_cislo"}
+    - telefónne číslo [+421944561588]{"entity": "telefonne_cislo"}
+    - mám telefónne číslo [+421944567893]{"entity": "telefonne_cislo"}
+    - Moje telefónne číslo je [+421915449111]{"entity": "telefonne_cislo"}
+    - Telefónne číslo [+421905561588]{"entity": "telefonne_cislo"}
+    - Mám telefónne číslo [+421950567893]{"entity": "telefonne_cislo"}
+    - [0950123567]{"entity": "telefonne_cislo"}
+    - [+421944000222]{"entity": "telefonne_cislo"}
+    - [0944000111]{"entity": "telefonne_cislo"}
+    - [0944456220]{"entity": "telefonne_cislo"}
+    - [0944907741]{"entity": "telefonne_cislo"}
+    - [0944997436]{"entity": "telefonne_cislo"}
+    - [0944997001]{"entity": "telefonne_cislo"}
+    - [0944998123]{"entity": "telefonne_cislo"}
+    - [0944996547]{"entity": "telefonne_cislo"}
+    - [0944998888]{"entity": "telefonne_cislo"}
+    - [0944997654]{"entity": "telefonne_cislo"}
+    - [0944999321]{"entity": "telefonne_cislo"}
+    - [0944995012]{"entity": "telefonne_cislo"}
+    - [0944994567]{"entity": "telefonne_cislo"}
+    - [0944997890]{"entity": "telefonne_cislo"}
+    - [0944995432]{"entity": "telefonne_cislo"}
+    - [0949870325]{"entity": "telefonne_cislo"}
+    - [0949500733]{"entity": "telefonne_cislo"}
+    - [0949123456]{"entity": "telefonne_cislo"}
+    - [0949987654]{"entity": "telefonne_cislo"}
+    - [0949456789]{"entity": "telefonne_cislo"}
+    - [0949123450]{"entity": "telefonne_cislo"}
+    - [0949765432]{"entity": "telefonne_cislo"}
+    - [0949221100]{"entity": "telefonne_cislo"}
+    - [0949456781]{"entity": "telefonne_cislo"}
+    - [0949123456]{"entity": "telefonne_cislo"}
+    - [0949988888]{"entity": "telefonne_cislo"}
+    - [0949567890]{"entity": "telefonne_cislo"}
+    - [0950123456]{"entity": "telefonne_cislo"}
+    - [0950765432]{"entity": "telefonne_cislo"}
+    - [0950897654]{"entity": "telefonne_cislo"}
+    - [0950345678]{"entity": "telefonne_cislo"}
+    - [0950567890]{"entity": "telefonne_cislo"}
+    - [0950987654]{"entity": "telefonne_cislo"}
+    - [0950456789]{"entity": "telefonne_cislo"}
+    - [0950678901]{"entity": "telefonne_cislo"}
+    - [0950321654]{"entity": "telefonne_cislo"}
+    - [0950543210]{"entity": "telefonne_cislo"}
+    - [0915112233]{"entity": "telefonne_cislo"}
+    - [0915998877]{"entity": "telefonne_cislo"}
+    - [0915443322]{"entity": "telefonne_cislo"}
+    - [0915789900]{"entity": "telefonne_cislo"}
+    - [0915331122]{"entity": "telefonne_cislo"}
+    - [0915004455]{"entity": "telefonne_cislo"}
+    - [0915887766]{"entity": "telefonne_cislo"}
+    - [0915229988]{"entity": "telefonne_cislo"}
+    - [0915665544]{"entity": "telefonne_cislo"}
+    - [0915112211]{"entity": "telefonne_cislo"}
+    - [0951112233]{"entity": "telefonne_cislo"}
+    - [0951234567]{"entity": "telefonne_cislo"}
+    - [0951557890]{"entity": "telefonne_cislo"}
+    - [0951998765]{"entity": "telefonne_cislo"}
+    - [0951887766]{"entity": "telefonne_cislo"}
+    - [0951665544]{"entity": "telefonne_cislo"}
+    - [0951443322]{"entity": "telefonne_cislo"}
+    - [0951888999]{"entity": "telefonne_cislo"}
+    - [0951221212]{"entity": "telefonne_cislo"}
+    - [0951991000]{"entity": "telefonne_cislo"}
+    - [0955123456]{"entity": "telefonne_cislo"}
+    - [0955678901]{"entity": "telefonne_cislo"}
+    - [0955999888]{"entity": "telefonne_cislo"}
+    - [0955441122]{"entity": "telefonne_cislo"}
+    - [0955012345]{"entity": "telefonne_cislo"}
+    - [0955234567]{"entity": "telefonne_cislo"}
+    - [0955777890]{"entity": "telefonne_cislo"}
+    - [0955555555]{"entity": "telefonne_cislo"}
+    - [0955898765]{"entity": "telefonne_cislo"}
+    - [0955987654]{"entity": "telefonne_cislo"}
+    - [0948123456]{"entity": "telefonne_cislo"}
+    - [0948765432]{"entity": "telefonne_cislo"}
+    - [0948345678]{"entity": "telefonne_cislo"}
+    - [0948888888]{"entity": "telefonne_cislo"}
+    - [0948000123]{"entity": "telefonne_cislo"}
+    - [0948555666]{"entity": "telefonne_cislo"}
+    - [0948999999]{"entity": "telefonne_cislo"}
+    - [0948001111]{"entity": "telefonne_cislo"}
+    - [0948444222]{"entity": "telefonne_cislo"}
+    - [0948991000]{"entity": "telefonne_cislo"}    
+- regex: telefonne_cislo
+  examples: |
+    - ^\+4219\d{8}$
+    - ^09\d{8}$    
+  
