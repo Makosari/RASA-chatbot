@@ -1,2 +1,2 @@
 # RASA-chatbot
-RASA chatbot for city of Košice with basic question set
+RASA chatbot for city of Košice with basic question set (Developed for Bachelor thesis)
