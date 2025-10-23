@@ -1,0 +1,463 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - inform_co_potrebujes
+  - inform_aky_formular
+  - inform_druh_priznania_PN
+  - inform_rok_priznania_PN
+  - inform_typ_osoby_PN
+  - inform_meno
+  - inform_priezvisko
+  - inform_rodne_cislo
+  - inform_datum_narodenia
+  - inform_ulica
+  - inform_obec
+  - inform_stat
+  - inform_obchodne_meno
+  - inform_pravna_forma
+  - inform_ICO
+  - inform_telefonne_cislo
+  - chitchat
+  - faq
+  - co_dokazem_faq
+  - aktuality
+  - kontakt
+  - kontakt_na_dane
+  - kontakt_na_odpad
+  - kontakt_na_psa
+  - kontakt_na_skolstvo
+  - navstevne_hodiny
+  - ask_for_service
+  - priznanie_faq
+  - service_dan
+  - service_smetie
+  - service_pes
+  - service_zakladna
+  - service_materska
+  - service_umelecka
+  - dieta
+  - ask_current_time
+  
+#############################################  ENTITIES
+entities:
+- aky_formular
+- druh_priznania_PN
+- rok_priznania_PN
+- typ_osoby_PN
+- meno_cloveka
+- priezvisko_cloveka
+- rodne_cislo
+- datum_narodenia
+- ulica
+- obec
+- stat
+- obchodne_meno
+- pravna_forma
+- ICO
+- telefonne_cislo
+
+
+#############################################  SLOTS
+slots:
+ 
+  aky_formular:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: aky_formular
+        conditions:
+        - active_loop: formular_form 
+
+  druh_priznania_PN:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: druh_priznania_PN   
+        conditions:
+        - active_loop: formular_form 
+
+  rok_priznania_PN:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: rok_priznania_PN
+        conditions:
+        - active_loop: formular_form
+        
+  typ_osoby_PN:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: typ_osoby_PN
+        conditions:
+        - active_loop: formular_form        
+
+  meno_cloveka:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: meno_cloveka
+        conditions:
+        - active_loop: formular_form       
+
+  priezvisko_cloveka:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: priezvisko_cloveka
+        conditions:
+        - active_loop: formular_form       
+        
+  rodne_cislo:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: rodne_cislo
+        conditions:
+        - active_loop: formular_form            
+
+  datum_narodenia:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: datum_narodenia
+        conditions:
+        - active_loop: formular_form 
+        
+  ulica:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: ulica
+        conditions:
+        - active_loop: formular_form   
+        
+  obec:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: obec
+        conditions:
+        - active_loop: formular_form                
+
+  stat:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: stat
+        conditions:
+        - active_loop: formular_form  
+
+  obchodne_meno:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: obchodne_meno
+        conditions:
+        - active_loop: formular_form  
+
+  pravna_forma:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: pravna_forma
+        conditions:
+        - active_loop: formular_form         
+
+  ICO:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: ICO
+        conditions:
+        - active_loop: formular_form  
+
+  telefonne_cislo:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: telefonne_cislo
+        conditions:
+        - active_loop: formular_form        
+
+############################################# FORMS         
+forms:
+  formular_form:
+    required_slots:
+    - aky_formular
+    - druh_priznania_PN
+    - rok_priznania_PN
+    - typ_osoby_PN
+    - meno_cloveka
+    - priezvisko_cloveka
+    - rodne_cislo
+    - datum_narodenia
+    - ulica
+    - obec
+    - stat
+    - obchodne_meno
+    - pravna_forma
+    - ICO
+    - telefonne_cislo
+
+
+#############################################  
+session_started_events:
+  - action: "utter_slots_values"
+
+
+
+responses:
+  utter_greet:
+  - text: "Dobrý deň! Ako vám môžem pomôcť?"
+
+  utter_cheer_up:
+  - text: "Tu je niečo na rozveselenie"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Pomohlo to? Je Váš problém vyriešený?"
+
+  utter_happy:
+  - text: "Super! Len tak ďalej!"
+
+  utter_goodbye:
+  - text: "Dovidenia!"
+
+  utter_iamabot:
+  - text: "Som chatbot! Teší ma!"
+  
+ 
+############################################################
+
+#PN   
+  utter_ask_formular_form_aky_formular:
+    - text: |
+        Aký formulár chcete vyplniť? Viem Vám pomôcť s vyplnením týchto dvoch formulárov, napíšte jednu z možností:
+        1. Podávanie daňového priznania k dani za psa
+        2. Podávanie daňového priznania k dani z nehnuteľnosti        
+
+  utter_ask_formular_form_druh_priznania_PN:
+    - text: | 
+        V poriadku, ďalej potrebujete vyplniť druh priznania, napíšte jednu z možností: 
+        1. Priznanie
+        2. Čiastkové priznanie
+        3. Čiastkové priznanie na zánik daňovej povinnosti
+        4. Opravné priznanie
+        5. Dodatočné priznanie
+  
+  utter_ask_formular_form_rok_priznania_PN:
+  - text: "Za aký rok chcete zaplatiť daň?"    
+  
+  utter_ask_formular_form_typ_osoby_PN:
+    - text: |
+        Aký typ osoby je daňovník? Napíšte jednu z možností:
+        1. fyzická osoba
+        2. fyzická osoba podnikateľ
+        3. právnicka osoba        
+
+  utter_ask_formular_form_meno_cloveka:
+  - text: "Ak ste uviedli, že daňovník je 'fyzická osoba' alebo 'fyzická osoba podnikateľ', uveďte krstné meno daňovníka. Ak nie, zadajte 'meno'."
+  
+  utter_ask_formular_form_priezvisko_cloveka:
+  - text: "Ak ste uviedli, že daňovník je 'fyzická osoba' alebo 'fyzická osoba podnikateľ', uveďte priezvisko daňovníka. Ak nie, zadajte 'priezvisko'."
+  
+  utter_ask_formular_form_rodne_cislo:
+  - text: "Ak ste uviedli, že daňovník je 'fyzická osoba', napíšte rodné číslo daňovníka. Uveďte aj '/', napríklad '910210/6788'. Ak nie, zadajte '0'."
+  
+  utter_ask_formular_form_datum_narodenia:
+  - text: "Ak ste uviedli, že daňovník je 'fyzická osoba', napíšte dátum narodenia daňovníka. Uveďte vo formáte DD.MM.YYYY."
+  
+  utter_ask_formular_form_ulica:
+  - text: "Aká je ulica trvalého bydliska ďanovníka?"
+  
+  utter_ask_formular_form_obec:
+  - text: "V akej obci/mestskej časti Košíc sa nachádza táto adresa? Napríklad Košice - Sídlisko KVP"
+  
+  utter_ask_formular_form_stat:
+  - text: "Uveďte štát, v ktorom sa nachádza adresa."
+  
+  utter_ask_formular_form_obchodne_meno:
+  - text: "Ak ste uviedli, že daňovník je 'právnicka osoba', uveďte obchodné meno daňovníka. Ak nie, napíšte 'obchodne meno'."
+
+  utter_ask_formular_form_pravna_forma:
+  - text: "Ak ste uviedli, že daňovník je 'fyzická osoba podnikateľ' alebo 'právnicka osoba', uveďte právnu formu daňovníka, 
+            napr. 's.r.o.', 'a.s.', 'obchodné družstvo'. Ak nie, zadajte 'pravna forma'."
+
+  utter_ask_formular_form_ICO:
+  - text: "Ak ste uviedli, že daňovník je 'fyzická osoba podnikateľ' alebo 'právnicka osoba', uveďte IČO 
+            (Identifikančé číslo organizácie) daňovníka. Zadajte 8 miestne číslo. Ak nie, napíšte 'ICO'."
+
+  utter_ask_formular_form_telefonne_cislo:
+  - text: "Aké je telefónne číslo daňovníka?"
+
+  utter_slots_values_formular_form:
+    - text: |
+        Tu sú vaše vyplnené údaje:
+        formulár: {aky_formular}
+        druh priznania: {druh_priznania_PN}
+        rok priznania: {rok_priznania_PN}
+        typ osoby: {typ_osoby_PN}
+        meno: {meno_cloveka}
+        priezvisko: {priezvisko_cloveka}
+        rodné číslo: {rodne_cislo}
+        dátum narodenia: {datum_narodenia}
+        ulica: {ulica}
+        obec: {obec}
+        štát: {stat}
+        obchodné meno: {obchodne_meno}
+        právna forma: {pravna_forma}
+        IČO: {ICO}
+        telefónne číslo: {telefonne_cislo}        
+
+#########mato
+  utter_answer_aktuality:
+  - text: "Tu si viete pozrieť najaktuálnejšie správy https://www.esluzbykosice.sk/CMS/novinky, alebo v časti samospráva."
+
+  utter_answer_kontakt:
+  - text: "Viem poskytnúť kontaktné údaje na oddelenie školstva, oddelenie poplatkov za odpad, a oddelenie poplatkov za psa. Na koho by ste chceli kontakt?"
+
+  utter_answer_kontakt_odpad:
+  - text: "Magistrát mesta Košice\n
+            Trieda SNP 48/A\n
+            040 11 Košice\n
+            spojovateľka  6419 111\n
+            Referát daní a poplatkov\n
+            Telefón: 6419 276 - pre občanov, 6419 180 - pre právnické osoby a podnikateľov \n
+            Fax: 6419 201\n
+            E-mail: poplatky@kosice.sk"
+
+  utter_answer_kontakt_dan_pes:
+  - text: "Magistrát mesta Košice\n
+            Trieda SNP 48/A\n
+            040 11 Košice\n
+            spojovateľka  6419 111\n
+            Referát daní a poplatkov\n
+            Telefón: 6419 180, 6419 182, 6419 277\n
+            Fax: 6419 201\n
+            E-mail: dane@ kosice.sk"
+
+
+  utter_answer_kontakt_skolstvo:
+  - text: "Magistrát mesta Košice  - oddelenie školstva\n
+            Trieda SNP 48/A\n
+            040 11 Košice\n
+            PhDr. Silvia Sviatková - referent pre školy a školské zariadenia\n
+            E-mail: silvia.sviatkova@kosice.sk"
+
+  utter_answer_navstevne_hodiny:
+  - text: "Pondelok 8:00 - 15:30\n
+            Utorok 8:00 - 15:30\n
+            Streda 8:00 - 18:00\n
+            Štvrtok 8:00 - 15:30\n
+            Piatok 8:00 - 14:30"
+
+  utter_answer_ako_pouzivat_portal:
+  - text: "Informácie o tom ako používať portál nájdete tu: https://www.esluzbykosice.sk/ako-pracovat-s-portalom"
+
+  utter_chitchat/ask_name:
+  - text: "Som chatbot! Teší ma!"
+
+  utter_chitchat/ask_weather:
+  - text: Tu si vieš skontrolovať počasie https://pocasie.sme.sk/krajina/slovensko/kosice/15-dni
+
+  utter_faq:
+  - text: Viem ti pomôcť vyplniť formuláre k dani za psa alebo nehnuteľnosť v meste Košice a zodpovedať jednoduché informačné otázky.
+
+  utter_co_dokazem_faq:
+  - text: Otázky ohľadom kontaktných údajov, zapísaní detí do škôl, podávaní priznaní.
+
+  utter_zapisanie_deti_faq:
+  - text: |
+      Deti dokážete zapísať do:
+      - materskej školy
+      - základnej školy
+      - umeleckej školy      
+
+  utter_priznanie_faq:
+  - text: |
+      Viem ti pomôcť s týmito priznaniami:
+
+      1. Daňové priznanie k dani z nehnuteľnosti
+      2. Daňové priznanie k dani za psa      
+
+  utter_answer:
+  - text: "Daňového priznania k dani z nehnuteľností.
+  Ohlasovanie zmeny poplatkovej povinnosti odpady.
+  Podávanie daňového priznania k dani za psa.
+  Prijímanie detí do základnej školy.
+  Prijímanie detí do materskej školy.
+  Prijímanie uchádzačov do umeleckej školy."
+
+  utter_answer_dan:
+  - text: "Tu viete podať daňové priznanie k dani z nehnuteľnosti:\n https://www.esluzbykosice.sk/info/291?slug=podavanie-danoveho-priznania-k-dani-z-nehnutelnosti"
+
+  utter_answer_smetie:
+  - text: "Tu viete riešiť problémy s komunálnym odpadom:\n https://www.esluzbykosice.sk/info/285?slug=ohlasovanie-vzniku-zaniku-alebo-zmeny-poplatkovej-povinnosti-za-komunalne-odpady-a-drobne-stavebne-odpady"
+
+  utter_answer_pes:
+  - text: "Tu viete podať daňové priznanie za psa:\n https://www.esluzbykosice.sk/info/287?slug=podavanie-danoveho-priznania-k-dani-za-psa"
+
+  utter_answer_zakladna:
+  - text: "Tu viete zapísať dieťa na základnú školu:\n https://www.esluzbykosice.sk/info/372?slug=prijimanie-deti-do-zakladnej-skoly"
+
+  utter_answer_materska:
+  - text: "Tu viete zapísať dieťa na materskú školu:\n https://www.esluzbykosice.sk/info/360?slug=prijimanie-deti-do-materskej-skoly"
+
+  utter_answer_umelecka:
+  - text: "Tu viete zapísať dieťa na základnú umeleckú školu:\n https://www.esluzbykosice.sk/info/373?slug=prijimanie-uchadzacov-do-zakladnej-umeleckej-skoly"
+
+  utter_answer_priznanie:
+  - text: "Podávanie priznania k dani z nehnuteľností v termíne do 31.1. zdaňovacieho obdobia."
+
+  utter_answer_dieta:
+  - text: "Ak máte dieťa môžete ho zapísať na základnú, materskú, alebo umeleckú školu."
+
+
+#all
+  utter_submit_alles:
+  - text: "Vaše údaje boli prijaté. Ďakujeme!"
+  
+
+
+############################################################
+actions:
+- utter_greet
+- utter_submit_alles
+- action_current_time
+- action_default_fallback
+
+- utter_ask_formular_form_aky_formular
+- utter_slots_values_formular_form
+- utter_ask_formular_form_druh_priznania_PN
+- utter_ask_formular_rok_priznania_PN
+- utter_ask_formular_form_ask_typ_osoby_PN
+- utter_ask_formular_form_meno_cloveka
+- utter_ask_formular_form_priezvisko_cloveka
+- utter_ask_formular_form_rodne_cislo
+- utter_ask_formular_form_datum_narodenia
+- utter_ask_formular_form_ulica
+- utter_ask_formular_form_obec
+- utter_ask_formular_form_stat
+- utter_ask_formular_form_obchodne_meno
+- utter_ask_formular_form_pravna_forma
+- utter_ask_formular_form_ICO
+- utter_ask_formular_form_telefonne_cislo
+
+############################################################
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+##priebeh
+#bot: sa pozdravy,
+#ja: ake otazky?,
+#bot: otazky ohladom kontakt udajov[mame], zapisani deti do skol[mame], podavanie priznani[]
+#ja: 
