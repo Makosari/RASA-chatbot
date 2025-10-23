@@ -1,0 +1,59 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'Som chatbot! Tesi ma!' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: respond to FAQs
+  steps:
+  - intent: faq
+  - action: utter_faq
+
+- rule: respond to chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+
+- rule: respond_current_time
+  steps:
+  - intent: ask_current_time
+  - action: action_current_time
+  
+
+#################################################################
+- rule: Activate formular form
+  steps:
+  - intent: inform_co_potrebujes
+  - action: formular_form
+  - active_loop: formular_form
+
+
+
+- rule: Submit formular form
+  condition:
+    - active_loop: formular_form
+  steps:
+  - action: formular_form
+  - active_loop: null
+  - slot_was_set:
+     - requested_slot: null
+  - action: utter_submit_alles
+  - action: utter_slots_values_formular_form 
+
+#################################################################
+
+
+
+
+
+
+
+  
