@@ -1,0 +1,167 @@
+version: "3.1"
+
+stories:
+
+
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: odpoved na mam dieta
+    steps:
+      - intent: dieta
+      - action: utter_answer_dieta
+
+  - story: odpoved kontakt na dan
+    steps:
+    - intent: ask_for_service
+    - action: utter_answer
+    - intent: service_dan
+    - action: utter_answer_dan
+    - or:
+      - intent: kontakt
+      - intent: kontakt_na_dane
+    - action: utter_answer_kontakt_dan_pes
+
+  - story: odpoved kontakt na smetie
+    steps:
+    - intent: ask_for_service
+    - action: utter_answer
+    - intent: service_smetie
+    - action: utter_answer_smetie
+    - or:
+      - intent: kontakt_na_odpad
+      - intent: kontakt
+    - action: utter_answer_kontakt_odpad
+
+  - story: odpoved kontakt na psa
+    steps:
+    - intent: ask_for_service
+    - action: utter_answer
+    - intent: service_pes
+    - action: utter_answer_pes
+    - or:
+      - intent: kontakt_na_psa
+      - intent: kontakt
+    - action: utter_answer_kontakt_dan_pes
+
+
+  - story: kontakt na psa
+    steps:
+    - intent: kontakt_na_psa
+    - action: utter_answer_kontakt_dan_pes
+
+  - story: odpoved kontakt na skolstvo
+    steps:
+    - intent: ask_for_service
+    - action: utter_answer
+    - intent: service_zakladna
+    - action: utter_answer_zakladna
+    - or:
+      - intent: kontakt_na_skolstvo
+      - intent: kontakt
+    - action: utter_answer_kontakt_skolstvo
+
+  - story: odpoved kontakt na skolstvo
+    steps:
+    - intent: ask_for_service
+    - action: utter_answer
+    - intent: service_materska
+    - action: utter_answer_materska
+    - or:
+      - intent: kontakt_na_skolstvo
+      - intent: kontakt
+    - action: utter_answer_kontakt_skolstvo
+
+  - story: odpoved kontakt na skolstvo
+    steps:
+    - intent: ask_for_service
+    - action: utter_answer
+    - intent: service_umelecka
+    - action: utter_answer_umelecka
+    - or:
+      - intent: kontakt_na_skolstvo
+      - intent: kontakt
+    - action: utter_answer_kontakt_skolstvo
+
+
+  - story: answer path basic kontakt odpad
+    steps:
+    - intent: kontakt
+    - action: utter_answer_kontakt
+    - intent: kontakt_na_odpad
+    - action: utter_answer_kontakt_odpad
+
+  - story: answer path basic kontakt skolstvo
+    steps:
+    - intent: kontakt
+    - action: utter_answer_kontakt
+    - intent: kontakt_na_skolstvo
+    - action: utter_answer_kontakt_skolstvo
+
+
+  - story: answer path easy kontakt odpad
+    steps:
+    - intent: kontakt_na_odpad
+    - action: utter_answer_kontakt_odpad
+
+  - story: answer path easy kontakt skolstvo
+    steps:
+    - intent: kontakt_na_skolstvo
+    - action: utter_answer_kontakt_skolstvo
+
+  - story: answer aktuality
+    steps:
+    - intent: aktuality
+    - action: utter_answer_aktuality
+
+  - story: answer navstevne hodiny
+    steps:
+    - intent: navstevne_hodiny
+    - action: utter_answer_navstevne_hodiny
+
+
+  - story: co dokazem - faq
+    steps:
+    - intent: co_dokazem_faq
+    - action: utter_co_dokazem_faq
+
+  - story: zapisanie deti - faq
+    steps:
+    - intent: zapisanie_deti_faq
+    - action: utter_zapisanie_deti_faq
+
+  
+  - story: ake priznania - faq
+    steps:
+    - intent: priznanie_faq  
+    - action: utter_priznanie_faq
+
+  #- story: kto si?
+  #  steps:
+  #  - intent: chitchat/ask_name
+  #  - action: utter_chitchat/ask_name
+
